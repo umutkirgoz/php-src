@@ -1,5 +1,29 @@
 PHP                                                                        NEWS
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+21 Oct 2026 PHP 7.0.33-sec1 (unofficial security backport, branch PHP-7.0.33-sec)
+
+  Not an official PHP release. PHP 7.0 is end of life; this branch only adds
+  the fixes below on top of PHP 7.0.33. PHP_VERSION is unchanged (7.0.33).
+
+- Core:
+  . Fixed GHSA-w8hw-w9fx-j79w (RCE via OOM corruption). (CVE-2026-109618)
+    Backport of upstream 01a40e89fbf (PHP 8.2.35). Instead of upstream's
+    delayed soft OOM, a memory_limit error now terminates the process after
+    the error is reported; shutdown functions and destructors no longer run
+    after such an error.
+  . Fixed GHSA-6wmf-4rv5-p3rp (RCE via stale global state). (CVE-2026-109619)
+    Backport of upstream 01a40e89fbf (PHP 8.2.35).
+
+- Session:
+  . Session upload progress no longer runs user code (autoload,
+    unserialize_callback_func, __wakeup) before RINIT, and preserves C:
+    payloads verbatim. (GHSA-6wmf-4rv5-p3rp)
+
+- Main:
+  . Multipart parser only keeps the Content-Disposition and Content-Type part
+    headers, and enforces post_max_size while reading when Content-Length is
+    not usable. (GHSA-w8hw-w9fx-j79w)
+
 06 Dec 2018 PHP 7.0.33
 
 - Core:
