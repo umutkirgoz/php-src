@@ -1,0 +1,137 @@
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Resolving Dependencies
+--> Running transaction check
+---> Package autoconf.noarch 0:2.69-11.el7 will be installed
+--> Processing Dependency: m4 >= 1.4.14 for package: autoconf-2.69-11.el7.noarch
+---> Package automake.noarch 0:1.13.4-3.el7 will be installed
+--> Processing Dependency: perl(Thread::Queue) for package: automake-1.13.4-3.el7.noarch
+--> Processing Dependency: perl(TAP::Parser) for package: automake-1.13.4-3.el7.noarch
+---> Package bison.x86_64 0:3.0.4-2.el7 will be installed
+---> Package gcc-c++.x86_64 0:4.8.5-44.el7 will be installed
+--> Processing Dependency: libstdc++-devel = 4.8.5-44.el7 for package: gcc-c++-4.8.5-44.el7.x86_64
+---> Package libtool.x86_64 0:2.4.2-22.el7_3 will be installed
+---> Package php55-build.x86_64 0:2.1-5.el7.remi will be installed
+---> Package re2c.x86_64 0:0.14.3-2.el7 will be installed
+---> Package rpm-build.x86_64 0:4.11.3-48.el7_9 will be installed
+--> Processing Dependency: patch >= 2.5 for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: elfutils >= 0.128 for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: unzip for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: bzip2 for package: rpm-build-4.11.3-48.el7_9.x86_64
+--> Processing Dependency: /usr/bin/gdb-add-index for package: rpm-build-4.11.3-48.el7_9.x86_64
+---> Package scl-utils-build.x86_64 0:20130529-19.el7 will be installed
+--> Processing Dependency: iso-codes for package: scl-utils-build-20130529-19.el7.x86_64
+--> Running transaction check
+---> Package bzip2.x86_64 0:1.0.6-13.el7 will be installed
+---> Package elfutils.x86_64 0:0.176-5.el7 will be installed
+---> Package gdb.x86_64 0:7.6.1-120.el7 will be installed
+---> Package iso-codes.noarch 0:3.46-2.el7 will be installed
+--> Processing Dependency: xml-common for package: iso-codes-3.46-2.el7.noarch
+---> Package libstdc++-devel.x86_64 0:4.8.5-44.el7 will be installed
+---> Package m4.x86_64 0:1.4.16-10.el7 will be installed
+---> Package patch.x86_64 0:2.7.1-12.el7_7 will be installed
+---> Package perl-Test-Harness.noarch 0:3.28-3.el7 will be installed
+---> Package perl-Thread-Queue.noarch 0:3.02-2.el7 will be installed
+---> Package unzip.x86_64 0:6.0-24.el7_9 will be installed
+--> Running transaction check
+---> Package xml-common.noarch 0:0.6.3-39.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch        Version                Repository      Size
+================================================================================
+Installing:
+ autoconf               noarch      2.69-11.el7            b-os           701 k
+ automake               noarch      1.13.4-3.el7           b-os           679 k
+ bison                  x86_64      3.0.4-2.el7            b-os           674 k
+ gcc-c++                x86_64      4.8.5-44.el7           b-os           7.2 M
+ libtool                x86_64      2.4.2-22.el7_3         b-os           588 k
+ php55-build            x86_64      2.1-5.el7.remi         b-remi         4.2 k
+ re2c                   x86_64      0.14.3-2.el7           b-epel         230 k
+ rpm-build              x86_64      4.11.3-48.el7_9        b-updates      150 k
+ scl-utils-build        x86_64      20130529-19.el7        b-os            18 k
+Installing for dependencies:
+ bzip2                  x86_64      1.0.6-13.el7           b-os            52 k
+ elfutils               x86_64      0.176-5.el7            b-os           308 k
+ gdb                    x86_64      7.6.1-120.el7          b-os           2.4 M
+ iso-codes              noarch      3.46-2.el7             b-os           2.7 M
+ libstdc++-devel        x86_64      4.8.5-44.el7           b-os           1.5 M
+ m4                     x86_64      1.4.16-10.el7          b-os           256 k
+ patch                  x86_64      2.7.1-12.el7_7         b-os           111 k
+ perl-Test-Harness      noarch      3.28-3.el7             b-os           302 k
+ perl-Thread-Queue      noarch      3.02-2.el7             b-os            17 k
+ unzip                  x86_64      6.0-24.el7_9           b-updates      172 k
+ xml-common             noarch      0.6.3-39.el7           b-os            26 k
+
+Transaction Summary
+================================================================================
+Install  9 Packages (+11 Dependent packages)
+
+Total download size: 18 M
+Installed size: 57 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                              8.4 MB/s |  18 MB  00:02     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : m4-1.4.16-10.el7.x86_64                                     1/20 
+  Installing : autoconf-2.69-11.el7.noarch                                 2/20 
+  Installing : perl-Thread-Queue-3.02-2.el7.noarch                         3/20 
+  Installing : elfutils-0.176-5.el7.x86_64                                 4/20 
+  Installing : xml-common-0.6.3-39.el7.noarch                              5/20 
+  Installing : iso-codes-3.46-2.el7.noarch                                 6/20 
+  Installing : scl-utils-build-20130529-19.el7.x86_64                      7/20 
+  Installing : libstdc++-devel-4.8.5-44.el7.x86_64                         8/20 
+  Installing : unzip-6.0-24.el7_9.x86_64                                   9/20 
+  Installing : gdb-7.6.1-120.el7.x86_64                                   10/20 
+  Installing : bzip2-1.0.6-13.el7.x86_64                                  11/20 
+  Installing : perl-Test-Harness-3.28-3.el7.noarch                        12/20 
+  Installing : automake-1.13.4-3.el7.noarch                               13/20 
+  Installing : patch-2.7.1-12.el7_7.x86_64                                14/20 
+  Installing : rpm-build-4.11.3-48.el7_9.x86_64                           15/20 
+  Installing : libtool-2.4.2-22.el7_3.x86_64                              16/20 
+  Installing : gcc-c++-4.8.5-44.el7.x86_64                                17/20 
+  Installing : php55-build-2.1-5.el7.remi.x86_64                          18/20 
+  Installing : bison-3.0.4-2.el7.x86_64                                   19/20 
+  Installing : re2c-0.14.3-2.el7.x86_64                                   20/20 
+  Verifying  : patch-2.7.1-12.el7_7.x86_64                                 1/20 
+  Verifying  : gcc-c++-4.8.5-44.el7.x86_64                                 2/20 
+  Verifying  : bison-3.0.4-2.el7.x86_64                                    3/20 
+  Verifying  : iso-codes-3.46-2.el7.noarch                                 4/20 
+  Verifying  : autoconf-2.69-11.el7.noarch                                 5/20 
+  Verifying  : perl-Test-Harness-3.28-3.el7.noarch                         6/20 
+  Verifying  : rpm-build-4.11.3-48.el7_9.x86_64                            7/20 
+  Verifying  : bzip2-1.0.6-13.el7.x86_64                                   8/20 
+  Verifying  : perl-Thread-Queue-3.02-2.el7.noarch                         9/20 
+  Verifying  : gdb-7.6.1-120.el7.x86_64                                   10/20 
+  Verifying  : unzip-6.0-24.el7_9.x86_64                                  11/20 
+  Verifying  : libstdc++-devel-4.8.5-44.el7.x86_64                        12/20 
+  Verifying  : re2c-0.14.3-2.el7.x86_64                                   13/20 
+  Verifying  : automake-1.13.4-3.el7.noarch                               14/20 
+  Verifying  : m4-1.4.16-10.el7.x86_64                                    15/20 
+  Verifying  : xml-common-0.6.3-39.el7.noarch                             16/20 
+  Verifying  : php55-build-2.1-5.el7.remi.x86_64                          17/20 
+  Verifying  : elfutils-0.176-5.el7.x86_64                                18/20 
+  Verifying  : libtool-2.4.2-22.el7_3.x86_64                              19/20 
+  Verifying  : scl-utils-build-20130529-19.el7.x86_64                     20/20 
+
+Installed:
+  autoconf.noarch 0:2.69-11.el7             automake.noarch 0:1.13.4-3.el7      
+  bison.x86_64 0:3.0.4-2.el7                gcc-c++.x86_64 0:4.8.5-44.el7       
+  libtool.x86_64 0:2.4.2-22.el7_3           php55-build.x86_64 0:2.1-5.el7.remi 
+  re2c.x86_64 0:0.14.3-2.el7                rpm-build.x86_64 0:4.11.3-48.el7_9  
+  scl-utils-build.x86_64 0:20130529-19.el7 
+
+Dependency Installed:
+  bzip2.x86_64 0:1.0.6-13.el7            elfutils.x86_64 0:0.176-5.el7         
+  gdb.x86_64 0:7.6.1-120.el7             iso-codes.noarch 0:3.46-2.el7         
+  libstdc++-devel.x86_64 0:4.8.5-44.el7  m4.x86_64 0:1.4.16-10.el7             
+  patch.x86_64 0:2.7.1-12.el7_7          perl-Test-Harness.noarch 0:3.28-3.el7 
+  perl-Thread-Queue.noarch 0:3.02-2.el7  unzip.x86_64 0:6.0-24.el7_9           
+  xml-common.noarch 0:0.6.3-39.el7      
+
+Complete!

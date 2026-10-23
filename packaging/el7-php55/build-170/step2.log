@@ -1,0 +1,882 @@
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Loading mirror speeds from cached hostfile
+Getting requirements for /root/rpmbuild/SPECS/php.spec
+ --> Already installed : scl-utils-build-20130529-19.el7.x86_64
+ --> bzip2-devel-1.0.6-13.el7.x86_64
+ --> libcurl-devel-7.29.0-59.el7_9.2.x86_64
+ --> libdb-devel-5.3.21-25.el7.x86_64
+ --> httpd-devel-2.4.6-99.el7.centos.1.x86_64
+ --> pam-devel-1.1.8-23.el7.x86_64
+ --> Already installed : libstdc++-devel-4.8.5-44.el7.x86_64
+ --> 1:openssl-devel-1.0.2k-26.el7_9.x86_64
+ --> sqlite-devel-3.7.17-8.el7_7.1.x86_64
+ --> zlib-devel-1.2.7-21.el7_9.x86_64
+ --> Already installed : 2:postfix-2.10.1-9.el7.x86_64
+ --> libedit-devel-3.0-12.20121213cvs.el7.x86_64
+ --> pcre-devel-8.32-17.el7.x86_64
+ --> Already installed : bzip2-1.0.6-13.el7.x86_64
+ --> Already installed : 4:perl-5.16.3-299.el7_9.x86_64
+ --> Already installed : libtool-2.4.2-22.el7_3.x86_64
+ --> Already installed : gcc-c++-4.8.5-44.el7.x86_64
+ --> libtool-ltdl-devel-2.4.2-22.el7_3.x86_64
+ --> systemtap-sdt-devel-4.0-13.el7.x86_64
+ --> systemd-devel-219-78.el7_9.9.x86_64
+ --> Already installed : systemd-219-78.el7_9.9.x86_64
+ --> krb5-devel-1.15.1-55.el7_9.x86_64
+ --> uw-imap-devel-2007f-16.el7.x86_64
+ --> cyrus-sasl-devel-2.1.26-24.el7_9.x86_64
+ --> openldap-devel-2.4.44-25.el7_9.x86_64
+ --> postgresql-devel-9.2.24-9.el7_9.x86_64
+ --> unixODBC-devel-2.3.1-14.el7.x86_64
+ --> libxml2-devel-2.9.1-6.el7_9.6.x86_64
+ --> firebird-devel-2.5.9.27139.0-1.el7.x86_64
+ --> 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+ --> libxslt-devel-1.1.28-6.el7.x86_64
+ --> libxml2-devel-2.9.1-6.el7_9.6.x86_64
+ --> libjpeg-turbo-devel-1.2.90-8.el7.x86_64
+ --> 2:libpng-devel-1.5.13-8.el7.x86_64
+ --> freetype-devel-2.8-14.el7_9.1.x86_64
+ --> libXpm-devel-3.5.12-2.el7_9.x86_64
+ --> t1lib-devel-5.1.2-14.el7.x86_64
+ --> gd3php-devel-2.3.3-7.el7.remi.x86_64
+ --> 1:gmp-devel-6.0.0-15.el7.x86_64
+ --> tokyocabinet-devel-1.4.48-3.el7.x86_64
+ --> libmcrypt-devel-2.5.8-13.el7.x86_64
+ --> libtidy-devel-5.4.0-1.el7.x86_64
+ --> freetds-devel-1.4.16-1.el7.x86_64
+ --> 12:aspell-devel-0.60.6.1-9.el7.x86_64
+ --> recode-devel-3.6-38.el7.x86_64
+ --> libicu-devel-50.2-4.el7_7.x86_64
+ --> 1:enchant-devel-1.6.0-8.el7.x86_64
+--> Running transaction check
+---> Package aspell-devel.x86_64 12:0.60.6.1-9.el7 will be installed
+--> Processing Dependency: aspell = 12:0.60.6.1-9.el7 for package: 12:aspell-devel-0.60.6.1-9.el7.x86_64
+--> Processing Dependency: libpspell.so.15()(64bit) for package: 12:aspell-devel-0.60.6.1-9.el7.x86_64
+--> Processing Dependency: libaspell.so.15()(64bit) for package: 12:aspell-devel-0.60.6.1-9.el7.x86_64
+---> Package bzip2-devel.x86_64 0:1.0.6-13.el7 will be installed
+---> Package cyrus-sasl-devel.x86_64 0:2.1.26-24.el7_9 will be installed
+--> Processing Dependency: cyrus-sasl(x86-64) = 2.1.26-24.el7_9 for package: cyrus-sasl-devel-2.1.26-24.el7_9.x86_64
+---> Package enchant-devel.x86_64 1:1.6.0-8.el7 will be installed
+--> Processing Dependency: enchant = 1:1.6.0-8.el7 for package: 1:enchant-devel-1.6.0-8.el7.x86_64
+--> Processing Dependency: pkgconfig(gmodule-no-export-2.0) for package: 1:enchant-devel-1.6.0-8.el7.x86_64
+--> Processing Dependency: pkgconfig(glib-2.0) for package: 1:enchant-devel-1.6.0-8.el7.x86_64
+--> Processing Dependency: glib2-devel for package: 1:enchant-devel-1.6.0-8.el7.x86_64
+--> Processing Dependency: libenchant.so.1()(64bit) for package: 1:enchant-devel-1.6.0-8.el7.x86_64
+---> Package firebird-devel.x86_64 0:2.5.9.27139.0-1.el7 will be installed
+--> Processing Dependency: firebird-libfbclient = 2.5.9.27139.0-1.el7 for package: firebird-devel-2.5.9.27139.0-1.el7.x86_64
+--> Processing Dependency: firebird-libfbembed = 2.5.9.27139.0-1.el7 for package: firebird-devel-2.5.9.27139.0-1.el7.x86_64
+--> Processing Dependency: libfbclient.so.2()(64bit) for package: firebird-devel-2.5.9.27139.0-1.el7.x86_64
+--> Processing Dependency: libfbembed.so.2.5()(64bit) for package: firebird-devel-2.5.9.27139.0-1.el7.x86_64
+---> Package freetds-devel.x86_64 0:1.4.16-1.el7 will be installed
+--> Processing Dependency: freetds-libs(x86-64) = 1.4.16-1.el7 for package: freetds-devel-1.4.16-1.el7.x86_64
+--> Processing Dependency: libct.so.4()(64bit) for package: freetds-devel-1.4.16-1.el7.x86_64
+--> Processing Dependency: libsybdb.so.5()(64bit) for package: freetds-devel-1.4.16-1.el7.x86_64
+---> Package freetype-devel.x86_64 0:2.8-14.el7_9.1 will be installed
+---> Package gd3php-devel.x86_64 0:2.3.3-7.el7.remi will be installed
+--> Processing Dependency: gd3php(x86-64) = 2.3.3-7.el7.remi for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: pkgconfig(libwebp) >= 0.2.0 for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: fontconfig-devel(x86-64) for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: libX11-devel(x86-64) for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: libraqm-devel for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: libtiff-devel(x86-64) for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: libwebp7-devel(x86-64) for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: pkgconfig(fontconfig) for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: pkgconfig(libtiff-4) for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: pkgconfig(raqm) for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: libgd.so.103()(64bit) for package: gd3php-devel-2.3.3-7.el7.remi.x86_64
+---> Package gmp-devel.x86_64 1:6.0.0-15.el7 will be installed
+---> Package httpd-devel.x86_64 0:2.4.6-99.el7.centos.1 will be installed
+--> Processing Dependency: apr-util-devel for package: httpd-devel-2.4.6-99.el7.centos.1.x86_64
+--> Processing Dependency: apr-devel for package: httpd-devel-2.4.6-99.el7.centos.1.x86_64
+---> Package krb5-devel.x86_64 0:1.15.1-55.el7_9 will be installed
+--> Processing Dependency: libkadm5(x86-64) = 1.15.1-55.el7_9 for package: krb5-devel-1.15.1-55.el7_9.x86_64
+--> Processing Dependency: libverto-devel for package: krb5-devel-1.15.1-55.el7_9.x86_64
+--> Processing Dependency: libselinux-devel for package: krb5-devel-1.15.1-55.el7_9.x86_64
+--> Processing Dependency: libcom_err-devel for package: krb5-devel-1.15.1-55.el7_9.x86_64
+--> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.15.1-55.el7_9.x86_64
+---> Package libXpm-devel.x86_64 0:3.5.12-2.el7_9 will be installed
+--> Processing Dependency: libXt.so.6()(64bit) for package: libXpm-devel-3.5.12-2.el7_9.x86_64
+--> Processing Dependency: libXext.so.6()(64bit) for package: libXpm-devel-3.5.12-2.el7_9.x86_64
+---> Package libcurl-devel.x86_64 0:7.29.0-59.el7_9.2 will be installed
+---> Package libdb-devel.x86_64 0:5.3.21-25.el7 will be installed
+---> Package libedit-devel.x86_64 0:3.0-12.20121213cvs.el7 will be installed
+--> Processing Dependency: ncurses-devel for package: libedit-devel-3.0-12.20121213cvs.el7.x86_64
+---> Package libicu-devel.x86_64 0:50.2-4.el7_7 will be installed
+--> Processing Dependency: libicu(x86-64) = 50.2-4.el7_7 for package: libicu-devel-50.2-4.el7_7.x86_64
+--> Processing Dependency: libicuuc.so.50()(64bit) for package: libicu-devel-50.2-4.el7_7.x86_64
+--> Processing Dependency: libicutu.so.50()(64bit) for package: libicu-devel-50.2-4.el7_7.x86_64
+--> Processing Dependency: libicutest.so.50()(64bit) for package: libicu-devel-50.2-4.el7_7.x86_64
+--> Processing Dependency: libiculx.so.50()(64bit) for package: libicu-devel-50.2-4.el7_7.x86_64
+--> Processing Dependency: libicule.so.50()(64bit) for package: libicu-devel-50.2-4.el7_7.x86_64
+--> Processing Dependency: libicuio.so.50()(64bit) for package: libicu-devel-50.2-4.el7_7.x86_64
+--> Processing Dependency: libicui18n.so.50()(64bit) for package: libicu-devel-50.2-4.el7_7.x86_64
+--> Processing Dependency: libicudata.so.50()(64bit) for package: libicu-devel-50.2-4.el7_7.x86_64
+---> Package libjpeg-turbo-devel.x86_64 0:1.2.90-8.el7 will be installed
+---> Package libmcrypt-devel.x86_64 0:2.5.8-13.el7 will be installed
+---> Package libpng-devel.x86_64 2:1.5.13-8.el7 will be installed
+---> Package libtidy-devel.x86_64 0:5.4.0-1.el7 will be installed
+--> Processing Dependency: libtidy(x86-64) = 5.4.0-1.el7 for package: libtidy-devel-5.4.0-1.el7.x86_64
+--> Processing Dependency: libtidy.so.5()(64bit) for package: libtidy-devel-5.4.0-1.el7.x86_64
+---> Package libtool-ltdl-devel.x86_64 0:2.4.2-22.el7_3 will be installed
+---> Package libxml2-devel.x86_64 0:2.9.1-6.el7_9.6 will be installed
+--> Processing Dependency: xz-devel for package: libxml2-devel-2.9.1-6.el7_9.6.x86_64
+---> Package libxslt-devel.x86_64 0:1.1.28-6.el7 will be installed
+--> Processing Dependency: libgcrypt-devel for package: libxslt-devel-1.1.28-6.el7.x86_64
+---> Package net-snmp-devel.x86_64 1:5.7.2-49.el7_9.4 will be installed
+--> Processing Dependency: net-snmp-libs = 1:5.7.2-49.el7_9.4 for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: net-snmp-agent-libs = 1:5.7.2-49.el7_9.4 for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: net-snmp = 1:5.7.2-49.el7_9.4 for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: tcp_wrappers-devel for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: rpm-devel for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: perl-devel(x86-64) for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: lm_sensors-devel for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: elfutils-libelf-devel for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: elfutils-devel for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: libnetsnmptrapd.so.31()(64bit) for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: libnetsnmpmibs.so.31()(64bit) for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: libnetsnmphelpers.so.31()(64bit) for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: libnetsnmpagent.so.31()(64bit) for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+--> Processing Dependency: libnetsnmp.so.31()(64bit) for package: 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64
+---> Package openldap-devel.x86_64 0:2.4.44-25.el7_9 will be installed
+---> Package openssl-devel.x86_64 1:1.0.2k-26.el7_9 will be installed
+---> Package pam-devel.x86_64 0:1.1.8-23.el7 will be installed
+---> Package pcre-devel.x86_64 0:8.32-17.el7 will be installed
+---> Package postgresql-devel.x86_64 0:9.2.24-9.el7_9 will be installed
+--> Processing Dependency: postgresql-libs(x86-64) = 9.2.24-9.el7_9 for package: postgresql-devel-9.2.24-9.el7_9.x86_64
+--> Processing Dependency: postgresql(x86-64) = 9.2.24-9.el7_9 for package: postgresql-devel-9.2.24-9.el7_9.x86_64
+--> Processing Dependency: libpq.so.5()(64bit) for package: postgresql-devel-9.2.24-9.el7_9.x86_64
+--> Processing Dependency: libpgtypes.so.3()(64bit) for package: postgresql-devel-9.2.24-9.el7_9.x86_64
+--> Processing Dependency: libecpg_compat.so.3()(64bit) for package: postgresql-devel-9.2.24-9.el7_9.x86_64
+--> Processing Dependency: libecpg.so.6()(64bit) for package: postgresql-devel-9.2.24-9.el7_9.x86_64
+---> Package recode-devel.x86_64 0:3.6-38.el7 will be installed
+--> Processing Dependency: recode = 3.6-38.el7 for package: recode-devel-3.6-38.el7.x86_64
+--> Processing Dependency: librecode.so.0()(64bit) for package: recode-devel-3.6-38.el7.x86_64
+---> Package sqlite-devel.x86_64 0:3.7.17-8.el7_7.1 will be installed
+---> Package systemd-devel.x86_64 0:219-78.el7_9.9 will be installed
+---> Package systemtap-sdt-devel.x86_64 0:4.0-13.el7 will be installed
+--> Processing Dependency: pyparsing for package: systemtap-sdt-devel-4.0-13.el7.x86_64
+---> Package t1lib-devel.x86_64 0:5.1.2-14.el7 will be installed
+--> Processing Dependency: t1lib = 5.1.2-14.el7 for package: t1lib-devel-5.1.2-14.el7.x86_64
+--> Processing Dependency: libt1x.so.5()(64bit) for package: t1lib-devel-5.1.2-14.el7.x86_64
+--> Processing Dependency: libt1.so.5()(64bit) for package: t1lib-devel-5.1.2-14.el7.x86_64
+---> Package tokyocabinet-devel.x86_64 0:1.4.48-3.el7 will be installed
+--> Processing Dependency: tokyocabinet = 1.4.48-3.el7 for package: tokyocabinet-devel-1.4.48-3.el7.x86_64
+--> Processing Dependency: libtokyocabinet.so.9()(64bit) for package: tokyocabinet-devel-1.4.48-3.el7.x86_64
+---> Package unixODBC-devel.x86_64 0:2.3.1-14.el7 will be installed
+--> Processing Dependency: unixODBC(x86-64) = 2.3.1-14.el7 for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libtemplate.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libtdsS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libsapdbS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: liboraodbcS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: liboplodbcS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libodbctxtS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libodbcnnS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libodbcminiS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libodbcdrvcfg2S.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libodbcdrvcfg1S.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libodbccr.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libnn.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libmimerS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+--> Processing Dependency: libesoobS.so.2()(64bit) for package: unixODBC-devel-2.3.1-14.el7.x86_64
+---> Package uw-imap-devel.x86_64 0:2007f-16.el7 will be installed
+--> Processing Dependency: libc-client(x86-64) = 2007f-16.el7 for package: uw-imap-devel-2007f-16.el7.x86_64
+--> Processing Dependency: libc-client.so.2007()(64bit) for package: uw-imap-devel-2007f-16.el7.x86_64
+---> Package zlib-devel.x86_64 0:1.2.7-21.el7_9 will be installed
+--> Running transaction check
+---> Package apr-devel.x86_64 0:1.4.8-7.el7 will be installed
+---> Package apr-util-devel.x86_64 0:1.5.2-6.el7_9.1 will be installed
+--> Processing Dependency: expat-devel(x86-64) for package: apr-util-devel-1.5.2-6.el7_9.1.x86_64
+---> Package aspell.x86_64 12:0.60.6.1-9.el7 will be installed
+---> Package cyrus-sasl.x86_64 0:2.1.26-24.el7_9 will be installed
+---> Package elfutils-devel.x86_64 0:0.176-5.el7 will be installed
+---> Package elfutils-libelf-devel.x86_64 0:0.176-5.el7 will be installed
+---> Package enchant.x86_64 1:1.6.0-8.el7 will be installed
+--> Processing Dependency: libhunspell-1.3.so.0()(64bit) for package: 1:enchant-1.6.0-8.el7.x86_64
+---> Package firebird-libfbclient.x86_64 0:2.5.9.27139.0-1.el7 will be installed
+---> Package firebird-libfbembed.x86_64 0:2.5.9.27139.0-1.el7 will be installed
+---> Package fontconfig-devel.x86_64 0:2.13.0-4.3.el7 will be installed
+--> Processing Dependency: pkgconfig(uuid) for package: fontconfig-devel-2.13.0-4.3.el7.x86_64
+---> Package freetds-libs.x86_64 0:1.4.16-1.el7 will be installed
+--> Processing Dependency: freetds = 1.4.16-1.el7 for package: freetds-libs-1.4.16-1.el7.x86_64
+---> Package gd3php.x86_64 0:2.3.3-7.el7.remi will be installed
+--> Processing Dependency: libtiff.so.5(LIBTIFF_4.0)(64bit) for package: gd3php-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: libraqm.so.0()(64bit) for package: gd3php-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: libtiff.so.5()(64bit) for package: gd3php-2.3.3-7.el7.remi.x86_64
+--> Processing Dependency: libwebp.so.7()(64bit) for package: gd3php-2.3.3-7.el7.remi.x86_64
+---> Package glib2-devel.x86_64 0:2.56.1-9.el7_9 will be installed
+---> Package keyutils-libs-devel.x86_64 0:1.5.8-3.el7 will be installed
+---> Package libX11-devel.x86_64 0:1.6.7-5.el7_9 will be installed
+--> Processing Dependency: pkgconfig(xcb) >= 1.11.1 for package: libX11-devel-1.6.7-5.el7_9.x86_64
+--> Processing Dependency: pkgconfig(xproto) for package: libX11-devel-1.6.7-5.el7_9.x86_64
+--> Processing Dependency: pkgconfig(xcb) for package: libX11-devel-1.6.7-5.el7_9.x86_64
+--> Processing Dependency: pkgconfig(kbproto) for package: libX11-devel-1.6.7-5.el7_9.x86_64
+---> Package libXext.x86_64 0:1.3.3-3.el7 will be installed
+---> Package libXt.x86_64 0:1.1.5-3.el7 will be installed
+--> Processing Dependency: libSM.so.6()(64bit) for package: libXt-1.1.5-3.el7.x86_64
+--> Processing Dependency: libICE.so.6()(64bit) for package: libXt-1.1.5-3.el7.x86_64
+---> Package libc-client.x86_64 0:2007f-16.el7 will be installed
+---> Package libcom_err-devel.x86_64 0:1.42.9-19.el7 will be installed
+---> Package libgcrypt-devel.x86_64 0:1.5.3-14.el7 will be installed
+--> Processing Dependency: libgpg-error-devel for package: libgcrypt-devel-1.5.3-14.el7.x86_64
+---> Package libicu.x86_64 0:50.2-4.el7_7 will be installed
+---> Package libkadm5.x86_64 0:1.15.1-55.el7_9 will be installed
+---> Package libraqm-devel.x86_64 0:0.7.0-4.el7 will be installed
+--> Processing Dependency: pkgconfig(fribidi) for package: libraqm-devel-0.7.0-4.el7.x86_64
+--> Processing Dependency: pkgconfig(harfbuzz) for package: libraqm-devel-0.7.0-4.el7.x86_64
+---> Package libselinux-devel.x86_64 0:2.5-15.el7 will be installed
+--> Processing Dependency: libsepol-devel(x86-64) >= 2.5-10 for package: libselinux-devel-2.5-15.el7.x86_64
+--> Processing Dependency: pkgconfig(libsepol) for package: libselinux-devel-2.5-15.el7.x86_64
+---> Package libtidy.x86_64 0:5.4.0-1.el7 will be installed
+---> Package libtiff-devel.x86_64 0:4.0.3-35.el7 will be installed
+---> Package libverto-devel.x86_64 0:0.2.5-4.el7 will be installed
+---> Package libwebp7-devel.x86_64 0:1.0.3-2.el7.remi will be installed
+---> Package lm_sensors-devel.x86_64 0:3.4.0-8.20160601gitf9185e5.el7_9.1 will be installed
+--> Processing Dependency: lm_sensors-libs = 3.4.0-8.20160601gitf9185e5.el7_9.1 for package: lm_sensors-devel-3.4.0-8.20160601gitf9185e5.el7_9.1.x86_64
+--> Processing Dependency: libsensors.so.4()(64bit) for package: lm_sensors-devel-3.4.0-8.20160601gitf9185e5.el7_9.1.x86_64
+---> Package ncurses-devel.x86_64 0:5.9-14.20130511.el7_4 will be installed
+---> Package net-snmp.x86_64 1:5.7.2-49.el7_9.4 will be installed
+---> Package net-snmp-agent-libs.x86_64 1:5.7.2-49.el7_9.4 will be installed
+---> Package net-snmp-libs.x86_64 1:5.7.2-49.el7_9.4 will be installed
+---> Package perl-devel.x86_64 4:5.16.3-299.el7_9 will be installed
+--> Processing Dependency: perl(ExtUtils::ParseXS) for package: 4:perl-devel-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(ExtUtils::MakeMaker) for package: 4:perl-devel-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(ExtUtils::Installed) for package: 4:perl-devel-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: gdbm-devel for package: 4:perl-devel-5.16.3-299.el7_9.x86_64
+---> Package postgresql.x86_64 0:9.2.24-9.el7_9 will be installed
+---> Package postgresql-libs.x86_64 0:9.2.24-9.el7_9 will be installed
+---> Package pyparsing.noarch 0:1.5.6-9.el7 will be installed
+---> Package recode.x86_64 0:3.6-38.el7 will be installed
+---> Package rpm-devel.x86_64 0:4.11.3-48.el7_9 will be installed
+--> Processing Dependency: popt-devel(x86-64) for package: rpm-devel-4.11.3-48.el7_9.x86_64
+---> Package t1lib.x86_64 0:5.1.2-14.el7 will be installed
+---> Package tcp_wrappers-devel.x86_64 0:7.6-77.el7 will be installed
+---> Package tokyocabinet.x86_64 0:1.4.48-3.el7 will be installed
+---> Package unixODBC.x86_64 0:2.3.1-14.el7 will be installed
+---> Package xz-devel.x86_64 0:5.2.2-2.el7_9 will be installed
+--> Running transaction check
+---> Package expat-devel.x86_64 0:2.1.0-15.el7_9 will be installed
+---> Package freetds.x86_64 0:1.4.16-1.el7 will be installed
+---> Package fribidi-devel.x86_64 0:1.0.2-1.el7_7.1 will be installed
+--> Processing Dependency: fribidi(x86-64) = 1.0.2-1.el7_7.1 for package: fribidi-devel-1.0.2-1.el7_7.1.x86_64
+--> Processing Dependency: libfribidi.so.0()(64bit) for package: fribidi-devel-1.0.2-1.el7_7.1.x86_64
+---> Package gdbm-devel.x86_64 0:1.10-8.el7 will be installed
+---> Package harfbuzz-devel.x86_64 0:1.7.5-2.el7 will be installed
+--> Processing Dependency: harfbuzz-icu(x86-64) = 1.7.5-2.el7 for package: harfbuzz-devel-1.7.5-2.el7.x86_64
+--> Processing Dependency: harfbuzz(x86-64) = 1.7.5-2.el7 for package: harfbuzz-devel-1.7.5-2.el7.x86_64
+--> Processing Dependency: pkgconfig(graphite2) for package: harfbuzz-devel-1.7.5-2.el7.x86_64
+--> Processing Dependency: libharfbuzz.so.0()(64bit) for package: harfbuzz-devel-1.7.5-2.el7.x86_64
+--> Processing Dependency: libharfbuzz-icu.so.0()(64bit) for package: harfbuzz-devel-1.7.5-2.el7.x86_64
+--> Processing Dependency: libcairo.so.2()(64bit) for package: harfbuzz-devel-1.7.5-2.el7.x86_64
+---> Package hunspell.x86_64 0:1.3.2-16.el7 will be installed
+--> Processing Dependency: hunspell-en-US for package: hunspell-1.3.2-16.el7.x86_64
+---> Package libICE.x86_64 0:1.0.9-9.el7 will be installed
+---> Package libSM.x86_64 0:1.2.2-2.el7 will be installed
+---> Package libgpg-error-devel.x86_64 0:1.12-3.el7 will be installed
+---> Package libraqm.x86_64 0:0.7.0-4.el7 will be installed
+---> Package libsepol-devel.x86_64 0:2.5-10.el7 will be installed
+---> Package libtiff.x86_64 0:4.0.3-35.el7 will be installed
+--> Processing Dependency: libjbig.so.2.0()(64bit) for package: libtiff-4.0.3-35.el7.x86_64
+---> Package libuuid-devel.x86_64 0:2.23.2-65.el7_9.1 will be installed
+---> Package libwebp7.x86_64 0:1.0.3-2.el7.remi will be installed
+---> Package libxcb-devel.x86_64 0:1.13-1.el7 will be installed
+--> Processing Dependency: pkgconfig(xau) >= 0.99.2 for package: libxcb-devel-1.13-1.el7.x86_64
+---> Package lm_sensors-libs.x86_64 0:3.4.0-8.20160601gitf9185e5.el7_9.1 will be installed
+---> Package perl-ExtUtils-Install.noarch 0:1.58-299.el7_9 will be installed
+---> Package perl-ExtUtils-MakeMaker.noarch 0:6.68-3.el7 will be installed
+--> Processing Dependency: perl(ExtUtils::Manifest) for package: perl-ExtUtils-MakeMaker-6.68-3.el7.noarch
+---> Package perl-ExtUtils-ParseXS.noarch 1:3.18-3.el7 will be installed
+---> Package popt-devel.x86_64 0:1.13-16.el7 will be installed
+---> Package xorg-x11-proto-devel.noarch 0:2018.4-1.el7 will be installed
+--> Running transaction check
+---> Package cairo.x86_64 0:1.15.12-4.el7 will be installed
+--> Processing Dependency: libpixman-1.so.0()(64bit) for package: cairo-1.15.12-4.el7.x86_64
+--> Processing Dependency: libXrender.so.1()(64bit) for package: cairo-1.15.12-4.el7.x86_64
+--> Processing Dependency: libGL.so.1()(64bit) for package: cairo-1.15.12-4.el7.x86_64
+--> Processing Dependency: libEGL.so.1()(64bit) for package: cairo-1.15.12-4.el7.x86_64
+---> Package fribidi.x86_64 0:1.0.2-1.el7_7.1 will be installed
+---> Package graphite2-devel.x86_64 0:1.3.10-1.el7_3 will be installed
+--> Processing Dependency: graphite2(x86-64) = 1.3.10-1.el7_3 for package: graphite2-devel-1.3.10-1.el7_3.x86_64
+--> Processing Dependency: libgraphite2.so.3()(64bit) for package: graphite2-devel-1.3.10-1.el7_3.x86_64
+---> Package harfbuzz.x86_64 0:1.7.5-2.el7 will be installed
+---> Package harfbuzz-icu.x86_64 0:1.7.5-2.el7 will be installed
+---> Package hunspell-en-US.noarch 0:0.20121024-6.el7 will be installed
+---> Package jbigkit-libs.x86_64 0:2.0-11.el7 will be installed
+---> Package libXau-devel.x86_64 0:1.0.8-2.1.el7 will be installed
+---> Package perl-ExtUtils-Manifest.noarch 0:1.61-244.el7 will be installed
+--> Running transaction check
+---> Package graphite2.x86_64 0:1.3.10-1.el7_3 will be installed
+---> Package libXrender.x86_64 0:0.9.10-1.el7 will be installed
+---> Package libglvnd-egl.x86_64 1:1.0.1-0.8.git5baa1e5.el7 will be installed
+--> Processing Dependency: libglvnd(x86-64) = 1:1.0.1-0.8.git5baa1e5.el7 for package: 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64
+--> Processing Dependency: mesa-libEGL(x86-64) >= 13.0.4-1 for package: 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64
+--> Processing Dependency: libGLdispatch.so.0()(64bit) for package: 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64
+---> Package libglvnd-glx.x86_64 1:1.0.1-0.8.git5baa1e5.el7 will be installed
+--> Processing Dependency: mesa-libGL(x86-64) >= 13.0.4-1 for package: 1:libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64
+---> Package pixman.x86_64 0:0.34.0-1.el7 will be installed
+--> Running transaction check
+---> Package libglvnd.x86_64 1:1.0.1-0.8.git5baa1e5.el7 will be installed
+---> Package mesa-libEGL.x86_64 0:18.3.4-12.el7_9 will be installed
+--> Processing Dependency: mesa-libgbm = 18.3.4-12.el7_9 for package: mesa-libEGL-18.3.4-12.el7_9.x86_64
+--> Processing Dependency: libxshmfence.so.1()(64bit) for package: mesa-libEGL-18.3.4-12.el7_9.x86_64
+--> Processing Dependency: libwayland-server.so.0()(64bit) for package: mesa-libEGL-18.3.4-12.el7_9.x86_64
+--> Processing Dependency: libwayland-client.so.0()(64bit) for package: mesa-libEGL-18.3.4-12.el7_9.x86_64
+--> Processing Dependency: libglapi.so.0()(64bit) for package: mesa-libEGL-18.3.4-12.el7_9.x86_64
+--> Processing Dependency: libgbm.so.1()(64bit) for package: mesa-libEGL-18.3.4-12.el7_9.x86_64
+---> Package mesa-libGL.x86_64 0:18.3.4-12.el7_9 will be installed
+--> Processing Dependency: libXxf86vm.so.1()(64bit) for package: mesa-libGL-18.3.4-12.el7_9.x86_64
+--> Processing Dependency: libXfixes.so.3()(64bit) for package: mesa-libGL-18.3.4-12.el7_9.x86_64
+--> Processing Dependency: libXdamage.so.1()(64bit) for package: mesa-libGL-18.3.4-12.el7_9.x86_64
+--> Running transaction check
+---> Package libXdamage.x86_64 0:1.1.4-4.1.el7 will be installed
+---> Package libXfixes.x86_64 0:5.0.3-1.el7 will be installed
+---> Package libXxf86vm.x86_64 0:1.1.4-1.el7 will be installed
+---> Package libwayland-client.x86_64 0:1.15.0-1.el7 will be installed
+---> Package libwayland-server.x86_64 0:1.15.0-1.el7 will be installed
+---> Package libxshmfence.x86_64 0:1.2-1.el7 will be installed
+---> Package mesa-libgbm.x86_64 0:18.3.4-12.el7_9 will be installed
+---> Package mesa-libglapi.x86_64 0:18.3.4-12.el7_9 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                 Arch   Version                         Repository
+                                                                           Size
+================================================================================
+Installing:
+ aspell-devel            x86_64 12:0.60.6.1-9.el7               b-os       47 k
+ bzip2-devel             x86_64 1.0.6-13.el7                    b-os      218 k
+ cyrus-sasl-devel        x86_64 2.1.26-24.el7_9                 b-updates 310 k
+ enchant-devel           x86_64 1:1.6.0-8.el7                   b-os       13 k
+ firebird-devel          x86_64 2.5.9.27139.0-1.el7             b-epel     47 k
+ freetds-devel           x86_64 1.4.16-1.el7                    b-epel     52 k
+ freetype-devel          x86_64 2.8-14.el7_9.1                  b-updates 447 k
+ gd3php-devel            x86_64 2.3.3-7.el7.remi                b-remi     45 k
+ gmp-devel               x86_64 1:6.0.0-15.el7                  b-os      181 k
+ httpd-devel             x86_64 2.4.6-99.el7.centos.1           b-updates 201 k
+ krb5-devel              x86_64 1.15.1-55.el7_9                 b-updates 273 k
+ libXpm-devel            x86_64 3.5.12-2.el7_9                  b-updates  37 k
+ libcurl-devel           x86_64 7.29.0-59.el7_9.2               b-updates 303 k
+ libdb-devel             x86_64 5.3.21-25.el7                   b-os       39 k
+ libedit-devel           x86_64 3.0-12.20121213cvs.el7          b-os       32 k
+ libicu-devel            x86_64 50.2-4.el7_7                    b-os      703 k
+ libjpeg-turbo-devel     x86_64 1.2.90-8.el7                    b-os       99 k
+ libmcrypt-devel         x86_64 2.5.8-13.el7                    b-epel     13 k
+ libpng-devel            x86_64 2:1.5.13-8.el7                  b-os      122 k
+ libtidy-devel           x86_64 5.4.0-1.el7                     b-epel     32 k
+ libtool-ltdl-devel      x86_64 2.4.2-22.el7_3                  b-os      167 k
+ libxml2-devel           x86_64 2.9.1-6.el7_9.6                 b-updates 1.1 M
+ libxslt-devel           x86_64 1.1.28-6.el7                    b-os      309 k
+ net-snmp-devel          x86_64 1:5.7.2-49.el7_9.4              b-updates 260 k
+ openldap-devel          x86_64 2.4.44-25.el7_9                 b-updates 805 k
+ openssl-devel           x86_64 1:1.0.2k-26.el7_9               b-updates 1.5 M
+ pam-devel               x86_64 1.1.8-23.el7                    b-os      185 k
+ pcre-devel              x86_64 8.32-17.el7                     b-os      480 k
+ postgresql-devel        x86_64 9.2.24-9.el7_9                  b-updates 962 k
+ recode-devel            x86_64 3.6-38.el7                      b-os       15 k
+ sqlite-devel            x86_64 3.7.17-8.el7_7.1                b-os      104 k
+ systemd-devel           x86_64 219-78.el7_9.9                  b-updates 217 k
+ systemtap-sdt-devel     x86_64 4.0-13.el7                      b-os       76 k
+ t1lib-devel             x86_64 5.1.2-14.el7                    b-os      521 k
+ tokyocabinet-devel      x86_64 1.4.48-3.el7                    b-os       91 k
+ unixODBC-devel          x86_64 2.3.1-14.el7                    b-os       55 k
+ uw-imap-devel           x86_64 2007f-16.el7                    b-epel     54 k
+ zlib-devel              x86_64 1.2.7-21.el7_9                  b-updates  50 k
+Installing for dependencies:
+ apr-devel               x86_64 1.4.8-7.el7                     b-os      188 k
+ apr-util-devel          x86_64 1.5.2-6.el7_9.1                 b-updates  76 k
+ aspell                  x86_64 12:0.60.6.1-9.el7               b-os      686 k
+ cairo                   x86_64 1.15.12-4.el7                   b-os      741 k
+ cyrus-sasl              x86_64 2.1.26-24.el7_9                 b-updates  88 k
+ elfutils-devel          x86_64 0.176-5.el7                     b-os       90 k
+ elfutils-libelf-devel   x86_64 0.176-5.el7                     b-os       40 k
+ enchant                 x86_64 1:1.6.0-8.el7                   b-os       55 k
+ expat-devel             x86_64 2.1.0-15.el7_9                  b-updates  58 k
+ firebird-libfbclient    x86_64 2.5.9.27139.0-1.el7             b-epel    326 k
+ firebird-libfbembed     x86_64 2.5.9.27139.0-1.el7             b-epel    1.7 M
+ fontconfig-devel        x86_64 2.13.0-4.3.el7                  b-os      138 k
+ freetds                 x86_64 1.4.16-1.el7                    b-epel    294 k
+ freetds-libs            x86_64 1.4.16-1.el7                    b-epel    380 k
+ fribidi                 x86_64 1.0.2-1.el7_7.1                 b-os       79 k
+ fribidi-devel           x86_64 1.0.2-1.el7_7.1                 b-os       25 k
+ gd3php                  x86_64 2.3.3-7.el7.remi                b-remi    138 k
+ gdbm-devel              x86_64 1.10-8.el7                      b-os       47 k
+ glib2-devel             x86_64 2.56.1-9.el7_9                  b-updates 453 k
+ graphite2               x86_64 1.3.10-1.el7_3                  b-os      115 k
+ graphite2-devel         x86_64 1.3.10-1.el7_3                  b-os       40 k
+ harfbuzz                x86_64 1.7.5-2.el7                     b-os      267 k
+ harfbuzz-devel          x86_64 1.7.5-2.el7                     b-os      167 k
+ harfbuzz-icu            x86_64 1.7.5-2.el7                     b-os       12 k
+ hunspell                x86_64 1.3.2-16.el7                    b-os      223 k
+ hunspell-en-US          noarch 0.20121024-6.el7                b-os      190 k
+ jbigkit-libs            x86_64 2.0-11.el7                      b-os       46 k
+ keyutils-libs-devel     x86_64 1.5.8-3.el7                     b-os       37 k
+ libICE                  x86_64 1.0.9-9.el7                     b-os       66 k
+ libSM                   x86_64 1.2.2-2.el7                     b-os       39 k
+ libX11-devel            x86_64 1.6.7-5.el7_9                   b-updates 982 k
+ libXau-devel            x86_64 1.0.8-2.1.el7                   b-os       14 k
+ libXdamage              x86_64 1.1.4-4.1.el7                   b-os       20 k
+ libXext                 x86_64 1.3.3-3.el7                     b-os       39 k
+ libXfixes               x86_64 5.0.3-1.el7                     b-os       18 k
+ libXrender              x86_64 0.9.10-1.el7                    b-os       26 k
+ libXt                   x86_64 1.1.5-3.el7                     b-os      173 k
+ libXxf86vm              x86_64 1.1.4-1.el7                     b-os       18 k
+ libc-client             x86_64 2007f-16.el7                    b-epel    562 k
+ libcom_err-devel        x86_64 1.42.9-19.el7                   b-os       32 k
+ libgcrypt-devel         x86_64 1.5.3-14.el7                    b-os      129 k
+ libglvnd                x86_64 1:1.0.1-0.8.git5baa1e5.el7      b-os       89 k
+ libglvnd-egl            x86_64 1:1.0.1-0.8.git5baa1e5.el7      b-os       44 k
+ libglvnd-glx            x86_64 1:1.0.1-0.8.git5baa1e5.el7      b-os      125 k
+ libgpg-error-devel      x86_64 1.12-3.el7                      b-os       16 k
+ libicu                  x86_64 50.2-4.el7_7                    b-os      6.9 M
+ libkadm5                x86_64 1.15.1-55.el7_9                 b-updates 180 k
+ libraqm                 x86_64 0.7.0-4.el7                     b-epel     15 k
+ libraqm-devel           x86_64 0.7.0-4.el7                     b-epel    9.0 k
+ libselinux-devel        x86_64 2.5-15.el7                      b-os      187 k
+ libsepol-devel          x86_64 2.5-10.el7                      b-os       77 k
+ libtidy                 x86_64 5.4.0-1.el7                     b-epel    174 k
+ libtiff                 x86_64 4.0.3-35.el7                    b-os      172 k
+ libtiff-devel           x86_64 4.0.3-35.el7                    b-os      474 k
+ libuuid-devel           x86_64 2.23.2-65.el7_9.1               b-updates  93 k
+ libverto-devel          x86_64 0.2.5-4.el7                     b-os       12 k
+ libwayland-client       x86_64 1.15.0-1.el7                    b-os       33 k
+ libwayland-server       x86_64 1.15.0-1.el7                    b-os       39 k
+ libwebp7                x86_64 1.0.3-2.el7.remi                b-remi    266 k
+ libwebp7-devel          x86_64 1.0.3-2.el7.remi                b-remi     33 k
+ libxcb-devel            x86_64 1.13-1.el7                      b-os      1.1 M
+ libxshmfence            x86_64 1.2-1.el7                       b-os      7.2 k
+ lm_sensors-devel        x86_64 3.4.0-8.20160601gitf9185e5.el7_9.1
+                                                                b-updates  27 k
+ lm_sensors-libs         x86_64 3.4.0-8.20160601gitf9185e5.el7_9.1
+                                                                b-updates  42 k
+ mesa-libEGL             x86_64 18.3.4-12.el7_9                 b-updates 110 k
+ mesa-libGL              x86_64 18.3.4-12.el7_9                 b-updates 166 k
+ mesa-libgbm             x86_64 18.3.4-12.el7_9                 b-updates  39 k
+ mesa-libglapi           x86_64 18.3.4-12.el7_9                 b-updates  46 k
+ ncurses-devel           x86_64 5.9-14.20130511.el7_4           b-os      712 k
+ net-snmp                x86_64 1:5.7.2-49.el7_9.4              b-updates 325 k
+ net-snmp-agent-libs     x86_64 1:5.7.2-49.el7_9.4              b-updates 707 k
+ net-snmp-libs           x86_64 1:5.7.2-49.el7_9.4              b-updates 752 k
+ perl-ExtUtils-Install   noarch 1.58-299.el7_9                  b-updates  75 k
+ perl-ExtUtils-MakeMaker noarch 6.68-3.el7                      b-os      275 k
+ perl-ExtUtils-Manifest  noarch 1.61-244.el7                    b-os       31 k
+ perl-ExtUtils-ParseXS   noarch 1:3.18-3.el7                    b-os       77 k
+ perl-devel              x86_64 4:5.16.3-299.el7_9              b-updates 454 k
+ pixman                  x86_64 0.34.0-1.el7                    b-os      248 k
+ popt-devel              x86_64 1.13-16.el7                     b-os       22 k
+ postgresql              x86_64 9.2.24-9.el7_9                  b-updates 3.0 M
+ postgresql-libs         x86_64 9.2.24-9.el7_9                  b-updates 235 k
+ pyparsing               noarch 1.5.6-9.el7                     b-os       94 k
+ recode                  x86_64 3.6-38.el7                      b-os      718 k
+ rpm-devel               x86_64 4.11.3-48.el7_9                 b-updates 108 k
+ t1lib                   x86_64 5.1.2-14.el7                    b-os      166 k
+ tcp_wrappers-devel      x86_64 7.6-77.el7                      b-os       17 k
+ tokyocabinet            x86_64 1.4.48-3.el7                    b-os      459 k
+ unixODBC                x86_64 2.3.1-14.el7                    b-os      413 k
+ xorg-x11-proto-devel    noarch 2018.4-1.el7                    b-os      280 k
+ xz-devel                x86_64 5.2.2-2.el7_9                   b-updates  46 k
+
+Transaction Summary
+================================================================================
+Install  38 Packages (+90 Dependent packages)
+
+Total download size: 38 M
+Installed size: 135 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                              6.4 MB/s |  38 MB  00:05     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : zlib-devel-1.2.7-21.el7_9.x86_64                           1/128 
+  Installing : libXext-1.3.3-3.el7.x86_64                                 2/128 
+  Installing : mesa-libglapi-18.3.4-12.el7_9.x86_64                       3/128 
+  Installing : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7_9.1.x86     4/128 
+  Installing : libicu-50.2-4.el7_7.x86_64                                 5/128 
+  Installing : unixODBC-2.3.1-14.el7.x86_64                               6/128 
+  Installing : 1:net-snmp-libs-5.7.2-49.el7_9.4.x86_64                    7/128 
+  Installing : 1:net-snmp-agent-libs-5.7.2-49.el7_9.4.x86_64              8/128 
+  Installing : freetds-1.4.16-1.el7.x86_64                                9/128 
+  Installing : freetds-libs-1.4.16-1.el7.x86_64                          10/128 
+  Installing : 2:libpng-devel-1.5.13-8.el7.x86_64                        11/128 
+  Installing : freetype-devel-2.8-14.el7_9.1.x86_64                      12/128 
+  Installing : elfutils-libelf-devel-0.176-5.el7.x86_64                  13/128 
+  Installing : hunspell-en-US-0.20121024-6.el7.noarch                    14/128 
+  Installing : hunspell-1.3.2-16.el7.x86_64                              15/128 
+  Installing : libXfixes-5.0.3-1.el7.x86_64                              16/128 
+  Installing : 1:libglvnd-1.0.1-0.8.git5baa1e5.el7.x86_64                17/128 
+  Installing : postgresql-libs-9.2.24-9.el7_9.x86_64                     18/128 
+  Installing : libwebp7-1.0.3-2.el7.remi.x86_64                          19/128 
+  Installing : libxshmfence-1.2-1.el7.x86_64                             20/128 
+  Installing : apr-devel-1.4.8-7.el7.x86_64                              21/128 
+  Installing : expat-devel-2.1.0-15.el7_9.x86_64                         22/128 
+  Installing : fribidi-1.0.2-1.el7_7.1.x86_64                            23/128 
+  Installing : pcre-devel-8.32-17.el7.x86_64                             24/128 
+  Installing : glib2-devel-2.56.1-9.el7_9.x86_64                         25/128 
+  Installing : libdb-devel-5.3.21-25.el7.x86_64                          26/128 
+  Installing : graphite2-1.3.10-1.el7_3.x86_64                           27/128 
+  Installing : harfbuzz-1.7.5-2.el7.x86_64                               28/128 
+  Installing : libraqm-0.7.0-4.el7.x86_64                                29/128 
+  Installing : libICE-1.0.9-9.el7.x86_64                                 30/128 
+  Installing : xz-devel-5.2.2-2.el7_9.x86_64                             31/128 
+  Installing : xorg-x11-proto-devel-2018.4-1.el7.noarch                  32/128 
+  Installing : libwayland-server-1.15.0-1.el7.x86_64                     33/128 
+  Installing : mesa-libgbm-18.3.4-12.el7_9.x86_64                        34/128 
+  Installing : libXau-devel-1.0.8-2.1.el7.x86_64                         35/128 
+  Installing : libxcb-devel-1.13-1.el7.x86_64                            36/128 
+  Installing : libX11-devel-1.6.7-5.el7_9.x86_64                         37/128 
+  Installing : elfutils-devel-0.176-5.el7.x86_64                         38/128 
+  Installing : libxml2-devel-2.9.1-6.el7_9.6.x86_64                      39/128 
+  Installing : libSM-1.2.2-2.el7.x86_64                                  40/128 
+  Installing : libXt-1.1.5-3.el7.x86_64                                  41/128 
+  Installing : libXpm-devel-3.5.12-2.el7_9.x86_64                        42/128 
+  Installing : harfbuzz-icu-1.7.5-2.el7.x86_64                           43/128 
+  Installing : graphite2-devel-1.3.10-1.el7_3.x86_64                     44/128 
+  Installing : fribidi-devel-1.0.2-1.el7_7.1.x86_64                      45/128 
+  Installing : libwebp7-devel-1.0.3-2.el7.remi.x86_64                    46/128 
+  Installing : postgresql-9.2.24-9.el7_9.x86_64                          47/128 
+  Installing : libXdamage-1.1.4-4.1.el7.x86_64                           48/128 
+  Installing : 1:enchant-1.6.0-8.el7.x86_64                              49/128 
+  Installing : 1:net-snmp-5.7.2-49.el7_9.4.x86_64                        50/128 
+  Installing : firebird-libfbembed-2.5.9.27139.0-1.el7.x86_64            51/128 
+  Installing : libicu-devel-50.2-4.el7_7.x86_64                          52/128 
+  Installing : lm_sensors-devel-3.4.0-8.20160601gitf9185e5.el7_9.1.x8    53/128 
+  Installing : libXxf86vm-1.1.4-1.el7.x86_64                             54/128 
+  Installing : 1:libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64            55/128 
+  Installing : mesa-libGL-18.3.4-12.el7_9.x86_64                         56/128 
+  Installing : tokyocabinet-1.4.48-3.el7.x86_64                          57/128 
+  Installing : libkadm5-1.15.1-55.el7_9.x86_64                           58/128 
+  Installing : jbigkit-libs-2.0-11.el7.x86_64                            59/128 
+  Installing : libtiff-4.0.3-35.el7.x86_64                               60/128 
+  Installing : gd3php-2.3.3-7.el7.remi.x86_64                            61/128 
+  Installing : libtiff-devel-4.0.3-35.el7.x86_64                         62/128 
+  Installing : pyparsing-1.5.6-9.el7.noarch                              63/128 
+  Installing : systemtap-sdt-devel-4.0-13.el7.x86_64                     64/128 
+  Installing : firebird-libfbclient-2.5.9.27139.0-1.el7.x86_64           65/128 
+  Installing : libjpeg-turbo-devel-1.2.90-8.el7.x86_64                   66/128 
+  Installing : libcom_err-devel-1.42.9-19.el7.x86_64                     67/128 
+  Installing : libc-client-2007f-16.el7.x86_64                           68/128 
+  Installing : ncurses-devel-5.9-14.20130511.el7_4.x86_64                69/128 
+  Installing : popt-devel-1.13-16.el7.x86_64                             70/128 
+  Installing : rpm-devel-4.11.3-48.el7_9.x86_64                          71/128 
+  Installing : gdbm-devel-1.10-8.el7.x86_64                              72/128 
+  Installing : libwayland-client-1.15.0-1.el7.x86_64                     73/128 
+  Installing : 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64            74/128 
+  Installing : mesa-libEGL-18.3.4-12.el7_9.x86_64                        75/128 
+  Installing : recode-3.6-38.el7.x86_64                                  76/128 
+  Installing : perl-ExtUtils-Manifest-1.61-244.el7.noarch                77/128 
+  Installing : perl-ExtUtils-MakeMaker-6.68-3.el7.noarch                 78/128 
+  Installing : 1:perl-ExtUtils-ParseXS-3.18-3.el7.noarch                 79/128 
+  Installing : 4:perl-devel-5.16.3-299.el7_9.x86_64                      80/128 
+  Installing : perl-ExtUtils-Install-1.58-299.el7_9.noarch               81/128 
+  Installing : pixman-0.34.0-1.el7.x86_64                                82/128 
+  Installing : t1lib-5.1.2-14.el7.x86_64                                 83/128 
+  Installing : libuuid-devel-2.23.2-65.el7_9.1.x86_64                    84/128 
+  Installing : fontconfig-devel-2.13.0-4.3.el7.x86_64                    85/128 
+  Installing : cyrus-sasl-2.1.26-24.el7_9.x86_64                         86/128 
+  Installing : cyrus-sasl-devel-2.1.26-24.el7_9.x86_64                   87/128 
+  Installing : openldap-devel-2.4.44-25.el7_9.x86_64                     88/128 
+  Installing : apr-util-devel-1.5.2-6.el7_9.1.x86_64                     89/128 
+  Installing : keyutils-libs-devel-1.5.8-3.el7.x86_64                    90/128 
+  Installing : tcp_wrappers-devel-7.6-77.el7.x86_64                      91/128 
+  Installing : libgpg-error-devel-1.12-3.el7.x86_64                      92/128 
+  Installing : libgcrypt-devel-1.5.3-14.el7.x86_64                       93/128 
+  Installing : libtidy-5.4.0-1.el7.x86_64                                94/128 
+  Installing : libsepol-devel-2.5-10.el7.x86_64                          95/128 
+  Installing : libselinux-devel-2.5-15.el7.x86_64                        96/128 
+  Installing : 12:aspell-0.60.6.1-9.el7.x86_64                           97/128 
+  Installing : libverto-devel-0.2.5-4.el7.x86_64                         98/128 
+  Installing : krb5-devel-1.15.1-55.el7_9.x86_64                         99/128 
+  Installing : 1:openssl-devel-1.0.2k-26.el7_9.x86_64                   100/128 
+  Installing : libXrender-0.9.10-1.el7.x86_64                           101/128 
+  Installing : cairo-1.15.12-4.el7.x86_64                               102/128 
+  Installing : harfbuzz-devel-1.7.5-2.el7.x86_64                        103/128 
+  Installing : libraqm-devel-0.7.0-4.el7.x86_64                         104/128 
+  Installing : gd3php-devel-2.3.3-7.el7.remi.x86_64                     105/128 
+  Installing : 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64                 106/128 
+  Installing : 12:aspell-devel-0.60.6.1-9.el7.x86_64                    107/128 
+  Installing : libtidy-devel-5.4.0-1.el7.x86_64                         108/128 
+  Installing : libxslt-devel-1.1.28-6.el7.x86_64                        109/128 
+  Installing : httpd-devel-2.4.6-99.el7.centos.1.x86_64                 110/128 
+  Installing : t1lib-devel-5.1.2-14.el7.x86_64                          111/128 
+  Installing : recode-devel-3.6-38.el7.x86_64                           112/128 
+  Installing : libedit-devel-3.0-12.20121213cvs.el7.x86_64              113/128 
+  Installing : uw-imap-devel-2007f-16.el7.x86_64                        114/128 
+  Installing : firebird-devel-2.5.9.27139.0-1.el7.x86_64                115/128 
+  Installing : tokyocabinet-devel-1.4.48-3.el7.x86_64                   116/128 
+  Installing : 1:enchant-devel-1.6.0-8.el7.x86_64                       117/128 
+  Installing : postgresql-devel-9.2.24-9.el7_9.x86_64                   118/128 
+  Installing : freetds-devel-1.4.16-1.el7.x86_64                        119/128 
+  Installing : unixODBC-devel-2.3.1-14.el7.x86_64                       120/128 
+  Installing : sqlite-devel-3.7.17-8.el7_7.1.x86_64                     121/128 
+  Installing : libcurl-devel-7.29.0-59.el7_9.2.x86_64                   122/128 
+  Installing : libmcrypt-devel-2.5.8-13.el7.x86_64                      123/128 
+  Installing : libtool-ltdl-devel-2.4.2-22.el7_3.x86_64                 124/128 
+  Installing : 1:gmp-devel-6.0.0-15.el7.x86_64                          125/128 
+  Installing : pam-devel-1.1.8-23.el7.x86_64                            126/128 
+  Installing : bzip2-devel-1.0.6-13.el7.x86_64                          127/128 
+  Installing : systemd-devel-219-78.el7_9.9.x86_64                      128/128 
+  Verifying  : libXext-1.3.3-3.el7.x86_64                                 1/128 
+  Verifying  : 1:enchant-1.6.0-8.el7.x86_64                               2/128 
+  Verifying  : 1:enchant-devel-1.6.0-8.el7.x86_64                         3/128 
+  Verifying  : libXrender-0.9.10-1.el7.x86_64                             4/128 
+  Verifying  : systemd-devel-219-78.el7_9.9.x86_64                        5/128 
+  Verifying  : perl-ExtUtils-Install-1.58-299.el7_9.noarch                6/128 
+  Verifying  : libwayland-server-1.15.0-1.el7.x86_64                      7/128 
+  Verifying  : bzip2-devel-1.0.6-13.el7.x86_64                            8/128 
+  Verifying  : 1:openssl-devel-1.0.2k-26.el7_9.x86_64                     9/128 
+  Verifying  : libverto-devel-0.2.5-4.el7.x86_64                         10/128 
+  Verifying  : xorg-x11-proto-devel-2018.4-1.el7.noarch                  11/128 
+  Verifying  : pam-devel-1.1.8-23.el7.x86_64                             12/128 
+  Verifying  : 12:aspell-0.60.6.1-9.el7.x86_64                           13/128 
+  Verifying  : libXpm-devel-3.5.12-2.el7_9.x86_64                        14/128 
+  Verifying  : gd3php-devel-2.3.3-7.el7.remi.x86_64                      15/128 
+  Verifying  : mesa-libgbm-18.3.4-12.el7_9.x86_64                        16/128 
+  Verifying  : glib2-devel-2.56.1-9.el7_9.x86_64                         17/128 
+  Verifying  : xz-devel-5.2.2-2.el7_9.x86_64                             18/128 
+  Verifying  : freetds-devel-1.4.16-1.el7.x86_64                         19/128 
+  Verifying  : libsepol-devel-2.5-10.el7.x86_64                          20/128 
+  Verifying  : rpm-devel-4.11.3-48.el7_9.x86_64                          21/128 
+  Verifying  : libtidy-5.4.0-1.el7.x86_64                                22/128 
+  Verifying  : libedit-devel-3.0-12.20121213cvs.el7.x86_64               23/128 
+  Verifying  : freetds-libs-1.4.16-1.el7.x86_64                          24/128 
+  Verifying  : libgpg-error-devel-1.12-3.el7.x86_64                      25/128 
+  Verifying  : tcp_wrappers-devel-7.6-77.el7.x86_64                      26/128 
+  Verifying  : firebird-libfbembed-2.5.9.27139.0-1.el7.x86_64            27/128 
+  Verifying  : libXau-devel-1.0.8-2.1.el7.x86_64                         28/128 
+  Verifying  : elfutils-devel-0.176-5.el7.x86_64                         29/128 
+  Verifying  : 2:libpng-devel-1.5.13-8.el7.x86_64                        30/128 
+  Verifying  : libICE-1.0.9-9.el7.x86_64                                 31/128 
+  Verifying  : keyutils-libs-devel-1.5.8-3.el7.x86_64                    32/128 
+  Verifying  : libxml2-devel-2.9.1-6.el7_9.6.x86_64                      33/128 
+  Verifying  : 1:gmp-devel-6.0.0-15.el7.x86_64                           34/128 
+  Verifying  : cyrus-sasl-devel-2.1.26-24.el7_9.x86_64                   35/128 
+  Verifying  : 1:net-snmp-libs-5.7.2-49.el7_9.4.x86_64                   36/128 
+  Verifying  : libicu-devel-50.2-4.el7_7.x86_64                          37/128 
+  Verifying  : unixODBC-2.3.1-14.el7.x86_64                              38/128 
+  Verifying  : cyrus-sasl-2.1.26-24.el7_9.x86_64                         39/128 
+  Verifying  : 1:perl-ExtUtils-ParseXS-3.18-3.el7.noarch                 40/128 
+  Verifying  : perl-ExtUtils-MakeMaker-6.68-3.el7.noarch                 41/128 
+  Verifying  : libuuid-devel-2.23.2-65.el7_9.1.x86_64                    42/128 
+  Verifying  : graphite2-devel-1.3.10-1.el7_3.x86_64                     43/128 
+  Verifying  : libxslt-devel-1.1.28-6.el7.x86_64                         44/128 
+  Verifying  : t1lib-devel-5.1.2-14.el7.x86_64                           45/128 
+  Verifying  : libicu-50.2-4.el7_7.x86_64                                46/128 
+  Verifying  : apr-util-devel-1.5.2-6.el7_9.1.x86_64                     47/128 
+  Verifying  : mesa-libGL-18.3.4-12.el7_9.x86_64                         48/128 
+  Verifying  : unixODBC-devel-2.3.1-14.el7.x86_64                        49/128 
+  Verifying  : gd3php-2.3.3-7.el7.remi.x86_64                            50/128 
+  Verifying  : libXdamage-1.1.4-4.1.el7.x86_64                           51/128 
+  Verifying  : t1lib-5.1.2-14.el7.x86_64                                 52/128 
+  Verifying  : harfbuzz-devel-1.7.5-2.el7.x86_64                         53/128 
+  Verifying  : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7_9.1.x86    54/128 
+  Verifying  : pixman-0.34.0-1.el7.x86_64                                55/128 
+  Verifying  : uw-imap-devel-2007f-16.el7.x86_64                         56/128 
+  Verifying  : elfutils-libelf-devel-0.176-5.el7.x86_64                  57/128 
+  Verifying  : 1:libglvnd-egl-1.0.1-0.8.git5baa1e5.el7.x86_64            58/128 
+  Verifying  : graphite2-1.3.10-1.el7_3.x86_64                           59/128 
+  Verifying  : firebird-devel-2.5.9.27139.0-1.el7.x86_64                 60/128 
+  Verifying  : libraqm-devel-0.7.0-4.el7.x86_64                          61/128 
+  Verifying  : freetds-1.4.16-1.el7.x86_64                               62/128 
+  Verifying  : 1:net-snmp-devel-5.7.2-49.el7_9.4.x86_64                  63/128 
+  Verifying  : lm_sensors-devel-3.4.0-8.20160601gitf9185e5.el7_9.1.x8    64/128 
+  Verifying  : libselinux-devel-2.5-15.el7.x86_64                        65/128 
+  Verifying  : libdb-devel-5.3.21-25.el7.x86_64                          66/128 
+  Verifying  : 1:libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64            67/128 
+  Verifying  : krb5-devel-1.15.1-55.el7_9.x86_64                         68/128 
+  Verifying  : perl-ExtUtils-Manifest-1.61-244.el7.noarch                69/128 
+  Verifying  : pcre-devel-8.32-17.el7.x86_64                             70/128 
+  Verifying  : hunspell-1.3.2-16.el7.x86_64                              71/128 
+  Verifying  : recode-3.6-38.el7.x86_64                                  72/128 
+  Verifying  : postgresql-devel-9.2.24-9.el7_9.x86_64                    73/128 
+  Verifying  : libwayland-client-1.15.0-1.el7.x86_64                     74/128 
+  Verifying  : gdbm-devel-1.10-8.el7.x86_64                              75/128 
+  Verifying  : fontconfig-devel-2.13.0-4.3.el7.x86_64                    76/128 
+  Verifying  : popt-devel-1.13-16.el7.x86_64                             77/128 
+  Verifying  : mesa-libglapi-18.3.4-12.el7_9.x86_64                      78/128 
+  Verifying  : libwebp7-devel-1.0.3-2.el7.remi.x86_64                    79/128 
+  Verifying  : ncurses-devel-5.9-14.20130511.el7_4.x86_64                80/128 
+  Verifying  : libX11-devel-1.6.7-5.el7_9.x86_64                         81/128 
+  Verifying  : libtidy-devel-5.4.0-1.el7.x86_64                          82/128 
+  Verifying  : fribidi-1.0.2-1.el7_7.1.x86_64                            83/128 
+  Verifying  : 1:net-snmp-5.7.2-49.el7_9.4.x86_64                        84/128 
+  Verifying  : harfbuzz-1.7.5-2.el7.x86_64                               85/128 
+  Verifying  : expat-devel-2.1.0-15.el7_9.x86_64                         86/128 
+  Verifying  : libXxf86vm-1.1.4-1.el7.x86_64                             87/128 
+  Verifying  : libc-client-2007f-16.el7.x86_64                           88/128 
+  Verifying  : libgcrypt-devel-1.5.3-14.el7.x86_64                       89/128 
+  Verifying  : libraqm-0.7.0-4.el7.x86_64                                90/128 
+  Verifying  : apr-devel-1.4.8-7.el7.x86_64                              91/128 
+  Verifying  : libxshmfence-1.2-1.el7.x86_64                             92/128 
+  Verifying  : httpd-devel-2.4.6-99.el7.centos.1.x86_64                  93/128 
+  Verifying  : fribidi-devel-1.0.2-1.el7_7.1.x86_64                      94/128 
+  Verifying  : libSM-1.2.2-2.el7.x86_64                                  95/128 
+  Verifying  : libcom_err-devel-1.42.9-19.el7.x86_64                     96/128 
+  Verifying  : libwebp7-1.0.3-2.el7.remi.x86_64                          97/128 
+  Verifying  : mesa-libEGL-18.3.4-12.el7_9.x86_64                        98/128 
+  Verifying  : recode-devel-3.6-38.el7.x86_64                            99/128 
+  Verifying  : libtool-ltdl-devel-2.4.2-22.el7_3.x86_64                 100/128 
+  Verifying  : libjpeg-turbo-devel-1.2.90-8.el7.x86_64                  101/128 
+  Verifying  : hunspell-en-US-0.20121024-6.el7.noarch                   102/128 
+  Verifying  : firebird-libfbclient-2.5.9.27139.0-1.el7.x86_64          103/128 
+  Verifying  : postgresql-libs-9.2.24-9.el7_9.x86_64                    104/128 
+  Verifying  : libXt-1.1.5-3.el7.x86_64                                 105/128 
+  Verifying  : libmcrypt-devel-2.5.8-13.el7.x86_64                      106/128 
+  Verifying  : pyparsing-1.5.6-9.el7.noarch                             107/128 
+  Verifying  : libcurl-devel-7.29.0-59.el7_9.2.x86_64                   108/128 
+  Verifying  : libtiff-4.0.3-35.el7.x86_64                              109/128 
+  Verifying  : 12:aspell-devel-0.60.6.1-9.el7.x86_64                    110/128 
+  Verifying  : systemtap-sdt-devel-4.0-13.el7.x86_64                    111/128 
+  Verifying  : 1:libglvnd-1.0.1-0.8.git5baa1e5.el7.x86_64               112/128 
+  Verifying  : zlib-devel-1.2.7-21.el7_9.x86_64                         113/128 
+  Verifying  : 4:perl-devel-5.16.3-299.el7_9.x86_64                     114/128 
+  Verifying  : libXfixes-5.0.3-1.el7.x86_64                             115/128 
+  Verifying  : 1:net-snmp-agent-libs-5.7.2-49.el7_9.4.x86_64            116/128 
+  Verifying  : freetype-devel-2.8-14.el7_9.1.x86_64                     117/128 
+  Verifying  : jbigkit-libs-2.0-11.el7.x86_64                           118/128 
+  Verifying  : cairo-1.15.12-4.el7.x86_64                               119/128 
+  Verifying  : postgresql-9.2.24-9.el7_9.x86_64                         120/128 
+  Verifying  : libxcb-devel-1.13-1.el7.x86_64                           121/128 
+  Verifying  : libkadm5-1.15.1-55.el7_9.x86_64                          122/128 
+  Verifying  : libtiff-devel-4.0.3-35.el7.x86_64                        123/128 
+  Verifying  : sqlite-devel-3.7.17-8.el7_7.1.x86_64                     124/128 
+  Verifying  : harfbuzz-icu-1.7.5-2.el7.x86_64                          125/128 
+  Verifying  : openldap-devel-2.4.44-25.el7_9.x86_64                    126/128 
+  Verifying  : tokyocabinet-devel-1.4.48-3.el7.x86_64                   127/128 
+  Verifying  : tokyocabinet-1.4.48-3.el7.x86_64                         128/128 
+
+Installed:
+  aspell-devel.x86_64 12:0.60.6.1-9.el7                                         
+  bzip2-devel.x86_64 0:1.0.6-13.el7                                             
+  cyrus-sasl-devel.x86_64 0:2.1.26-24.el7_9                                     
+  enchant-devel.x86_64 1:1.6.0-8.el7                                            
+  firebird-devel.x86_64 0:2.5.9.27139.0-1.el7                                   
+  freetds-devel.x86_64 0:1.4.16-1.el7                                           
+  freetype-devel.x86_64 0:2.8-14.el7_9.1                                        
+  gd3php-devel.x86_64 0:2.3.3-7.el7.remi                                        
+  gmp-devel.x86_64 1:6.0.0-15.el7                                               
+  httpd-devel.x86_64 0:2.4.6-99.el7.centos.1                                    
+  krb5-devel.x86_64 0:1.15.1-55.el7_9                                           
+  libXpm-devel.x86_64 0:3.5.12-2.el7_9                                          
+  libcurl-devel.x86_64 0:7.29.0-59.el7_9.2                                      
+  libdb-devel.x86_64 0:5.3.21-25.el7                                            
+  libedit-devel.x86_64 0:3.0-12.20121213cvs.el7                                 
+  libicu-devel.x86_64 0:50.2-4.el7_7                                            
+  libjpeg-turbo-devel.x86_64 0:1.2.90-8.el7                                     
+  libmcrypt-devel.x86_64 0:2.5.8-13.el7                                         
+  libpng-devel.x86_64 2:1.5.13-8.el7                                            
+  libtidy-devel.x86_64 0:5.4.0-1.el7                                            
+  libtool-ltdl-devel.x86_64 0:2.4.2-22.el7_3                                    
+  libxml2-devel.x86_64 0:2.9.1-6.el7_9.6                                        
+  libxslt-devel.x86_64 0:1.1.28-6.el7                                           
+  net-snmp-devel.x86_64 1:5.7.2-49.el7_9.4                                      
+  openldap-devel.x86_64 0:2.4.44-25.el7_9                                       
+  openssl-devel.x86_64 1:1.0.2k-26.el7_9                                        
+  pam-devel.x86_64 0:1.1.8-23.el7                                               
+  pcre-devel.x86_64 0:8.32-17.el7                                               
+  postgresql-devel.x86_64 0:9.2.24-9.el7_9                                      
+  recode-devel.x86_64 0:3.6-38.el7                                              
+  sqlite-devel.x86_64 0:3.7.17-8.el7_7.1                                        
+  systemd-devel.x86_64 0:219-78.el7_9.9                                         
+  systemtap-sdt-devel.x86_64 0:4.0-13.el7                                       
+  t1lib-devel.x86_64 0:5.1.2-14.el7                                             
+  tokyocabinet-devel.x86_64 0:1.4.48-3.el7                                      
+  unixODBC-devel.x86_64 0:2.3.1-14.el7                                          
+  uw-imap-devel.x86_64 0:2007f-16.el7                                           
+  zlib-devel.x86_64 0:1.2.7-21.el7_9                                            
+
+Dependency Installed:
+  apr-devel.x86_64 0:1.4.8-7.el7                                                
+  apr-util-devel.x86_64 0:1.5.2-6.el7_9.1                                       
+  aspell.x86_64 12:0.60.6.1-9.el7                                               
+  cairo.x86_64 0:1.15.12-4.el7                                                  
+  cyrus-sasl.x86_64 0:2.1.26-24.el7_9                                           
+  elfutils-devel.x86_64 0:0.176-5.el7                                           
+  elfutils-libelf-devel.x86_64 0:0.176-5.el7                                    
+  enchant.x86_64 1:1.6.0-8.el7                                                  
+  expat-devel.x86_64 0:2.1.0-15.el7_9                                           
+  firebird-libfbclient.x86_64 0:2.5.9.27139.0-1.el7                             
+  firebird-libfbembed.x86_64 0:2.5.9.27139.0-1.el7                              
+  fontconfig-devel.x86_64 0:2.13.0-4.3.el7                                      
+  freetds.x86_64 0:1.4.16-1.el7                                                 
+  freetds-libs.x86_64 0:1.4.16-1.el7                                            
+  fribidi.x86_64 0:1.0.2-1.el7_7.1                                              
+  fribidi-devel.x86_64 0:1.0.2-1.el7_7.1                                        
+  gd3php.x86_64 0:2.3.3-7.el7.remi                                              
+  gdbm-devel.x86_64 0:1.10-8.el7                                                
+  glib2-devel.x86_64 0:2.56.1-9.el7_9                                           
+  graphite2.x86_64 0:1.3.10-1.el7_3                                             
+  graphite2-devel.x86_64 0:1.3.10-1.el7_3                                       
+  harfbuzz.x86_64 0:1.7.5-2.el7                                                 
+  harfbuzz-devel.x86_64 0:1.7.5-2.el7                                           
+  harfbuzz-icu.x86_64 0:1.7.5-2.el7                                             
+  hunspell.x86_64 0:1.3.2-16.el7                                                
+  hunspell-en-US.noarch 0:0.20121024-6.el7                                      
+  jbigkit-libs.x86_64 0:2.0-11.el7                                              
+  keyutils-libs-devel.x86_64 0:1.5.8-3.el7                                      
+  libICE.x86_64 0:1.0.9-9.el7                                                   
+  libSM.x86_64 0:1.2.2-2.el7                                                    
+  libX11-devel.x86_64 0:1.6.7-5.el7_9                                           
+  libXau-devel.x86_64 0:1.0.8-2.1.el7                                           
+  libXdamage.x86_64 0:1.1.4-4.1.el7                                             
+  libXext.x86_64 0:1.3.3-3.el7                                                  
+  libXfixes.x86_64 0:5.0.3-1.el7                                                
+  libXrender.x86_64 0:0.9.10-1.el7                                              
+  libXt.x86_64 0:1.1.5-3.el7                                                    
+  libXxf86vm.x86_64 0:1.1.4-1.el7                                               
+  libc-client.x86_64 0:2007f-16.el7                                             
+  libcom_err-devel.x86_64 0:1.42.9-19.el7                                       
+  libgcrypt-devel.x86_64 0:1.5.3-14.el7                                         
+  libglvnd.x86_64 1:1.0.1-0.8.git5baa1e5.el7                                    
+  libglvnd-egl.x86_64 1:1.0.1-0.8.git5baa1e5.el7                                
+  libglvnd-glx.x86_64 1:1.0.1-0.8.git5baa1e5.el7                                
+  libgpg-error-devel.x86_64 0:1.12-3.el7                                        
+  libicu.x86_64 0:50.2-4.el7_7                                                  
+  libkadm5.x86_64 0:1.15.1-55.el7_9                                             
+  libraqm.x86_64 0:0.7.0-4.el7                                                  
+  libraqm-devel.x86_64 0:0.7.0-4.el7                                            
+  libselinux-devel.x86_64 0:2.5-15.el7                                          
+  libsepol-devel.x86_64 0:2.5-10.el7                                            
+  libtidy.x86_64 0:5.4.0-1.el7                                                  
+  libtiff.x86_64 0:4.0.3-35.el7                                                 
+  libtiff-devel.x86_64 0:4.0.3-35.el7                                           
+  libuuid-devel.x86_64 0:2.23.2-65.el7_9.1                                      
+  libverto-devel.x86_64 0:0.2.5-4.el7                                           
+  libwayland-client.x86_64 0:1.15.0-1.el7                                       
+  libwayland-server.x86_64 0:1.15.0-1.el7                                       
+  libwebp7.x86_64 0:1.0.3-2.el7.remi                                            
+  libwebp7-devel.x86_64 0:1.0.3-2.el7.remi                                      
+  libxcb-devel.x86_64 0:1.13-1.el7                                              
+  libxshmfence.x86_64 0:1.2-1.el7                                               
+  lm_sensors-devel.x86_64 0:3.4.0-8.20160601gitf9185e5.el7_9.1                  
+  lm_sensors-libs.x86_64 0:3.4.0-8.20160601gitf9185e5.el7_9.1                   
+  mesa-libEGL.x86_64 0:18.3.4-12.el7_9                                          
+  mesa-libGL.x86_64 0:18.3.4-12.el7_9                                           
+  mesa-libgbm.x86_64 0:18.3.4-12.el7_9                                          
+  mesa-libglapi.x86_64 0:18.3.4-12.el7_9                                        
+  ncurses-devel.x86_64 0:5.9-14.20130511.el7_4                                  
+  net-snmp.x86_64 1:5.7.2-49.el7_9.4                                            
+  net-snmp-agent-libs.x86_64 1:5.7.2-49.el7_9.4                                 
+  net-snmp-libs.x86_64 1:5.7.2-49.el7_9.4                                       
+  perl-ExtUtils-Install.noarch 0:1.58-299.el7_9                                 
+  perl-ExtUtils-MakeMaker.noarch 0:6.68-3.el7                                   
+  perl-ExtUtils-Manifest.noarch 0:1.61-244.el7                                  
+  perl-ExtUtils-ParseXS.noarch 1:3.18-3.el7                                     
+  perl-devel.x86_64 4:5.16.3-299.el7_9                                          
+  pixman.x86_64 0:0.34.0-1.el7                                                  
+  popt-devel.x86_64 0:1.13-16.el7                                               
+  postgresql.x86_64 0:9.2.24-9.el7_9                                            
+  postgresql-libs.x86_64 0:9.2.24-9.el7_9                                       
+  pyparsing.noarch 0:1.5.6-9.el7                                                
+  recode.x86_64 0:3.6-38.el7                                                    
+  rpm-devel.x86_64 0:4.11.3-48.el7_9                                            
+  t1lib.x86_64 0:5.1.2-14.el7                                                   
+  tcp_wrappers-devel.x86_64 0:7.6-77.el7                                        
+  tokyocabinet.x86_64 0:1.4.48-3.el7                                            
+  unixODBC.x86_64 0:2.3.1-14.el7                                                
+  xorg-x11-proto-devel.noarch 0:2018.4-1.el7                                    
+  xz-devel.x86_64 0:5.2.2-2.el7_9                                               
+
+Complete!

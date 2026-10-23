@@ -1,0 +1,14 @@
+# build outputs and downloaded sources (see fetch-sources.sh)
+/RPMS/*.rpm
+/SRPMS/*.rpm
+/rollback/*.rpm
+/SOURCES/php-5.5.38-strip.tar.xz
+/php55-php-5.5.38-13.remi.src.rpm
+/build-170/*.tar.gz
+/build-170/RPMS/
+/build-170/SRPMS/
+/build-170/build.log
+/deploy/*.tar.gz
+
+# the top-level php-src .gitignore excludes *.patch; the spec patches are sources here
+!/SOURCES/*.patch
