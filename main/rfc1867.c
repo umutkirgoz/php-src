@@ -244,6 +244,11 @@ static int fill_buffer(multipart_buffer *self TSRMLS_DC)
 
 	self->buf_begin = self->buffer;
 
+	/* Without a usable Content-Length, post_max_size was not checked upfront */
+	if (SG(post_max_size) > 0 && SG(read_post_bytes) > SG(post_max_size)) {
+		return 0;
+	}
+
 	/* calculate the free space in the buffer */
 	bytes_to_read = self->bufsize - self->bytes_in_buffer;
 
@@ -395,6 +400,14 @@ static int find_boundary(multipart_buffer *self, char *boundary TSRMLS_DC)
 	return 0;
 }
 
+static zend_bool php_mime_should_save_hdr(const char *name)
+{
+	return !strcasecmp(name, "Content-Disposition")
+		|| !strcasecmp(name, "Content-Type");
+}
+
+static char *php_mime_get_hdr_value(zend_llist header, char *key);
+
 /* parse headers */
 static int multipart_buffer_headers(multipart_buffer *self, zend_llist *header TSRMLS_DC)
 {
@@ -436,10 +449,17 @@ static int multipart_buffer_headers(multipart_buffer *self, zend_llist *header T
 			}
 
 			*value = '\0';
-			do { value++; } while(isspace(*value));
 
-			key = estrdup(line);
-			smart_str_appends(&buf_value, value);
+			/* Keep only headers we use, and ignore duplicates: the number of
+			 * headers per part is otherwise unbounded */
+			if (!php_mime_should_save_hdr(line)
+					|| php_mime_get_hdr_value(*header, line)) {
+				key = NULL;
+			} else {
+				key = estrdup(line);
+				do { value++; } while(isspace(*value));
+				smart_str_appends(&buf_value, value);
+			}
 		} else if (buf_value.c) { /* If no ':' on the line, add to previous line */
 			smart_str_appends(&buf_value, line);
 		} else {
@@ -512,11 +532,11 @@ static char *php_ap_getword(const zend_encoding *encoding, char **line, char sto
 	return res;
 }
 
-static char *substring_conf(char *start, int len, char quote)
+static char *substring_conf(char *start, size_t len, char quote)
 {
-	char *result = emalloc(len + 1);
+	char *result = safe_emalloc(len, 1, 1);
 	char *resp = result;
-	int i;
+	size_t i;
 
 	for (i = 0; i < len && start[i] != quote; ++i) {
 		if (start[i] == '\\' && (start[i + 1] == '\\' || (quote && start[i + 1] == quote))) {
@@ -551,7 +571,7 @@ static char *php_ap_getword_conf(const zend_encoding *encoding, char *str TSRMLS
 		while (*strend && !isspace(*strend)) {
 			++strend;
 		}
-		return substring_conf(str, strend - str, 0);
+		return substring_conf(str, (size_t)(strend - str), 0);
 	}
 }
 
@@ -1256,6 +1276,9 @@ SAPI_API SAPI_POST_HANDLER_FUNC(rfc1867_post_handler) /* {{{ */
 	}
 
 fileupload_done:
+	if (SG(post_max_size) > 0 && SG(read_post_bytes) > SG(post_max_size)) {
+		sapi_module.sapi_error(E_WARNING, "Actual POST length does not match Content-Length, and exceeds %ld bytes", SG(post_max_size));
+	}
 	if (php_rfc1867_callback != NULL) {
 		multipart_event_end event_end;
 

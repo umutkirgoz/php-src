@@ -956,8 +956,9 @@ static void php_wddx_pop_element(void *user_data, const XML_Char *name)
 			Z_STRLEN_P(ent1->data) = new_len;
 		}
 
-		/* Call __wakeup() method on the object. */
-		if (Z_TYPE_P(ent1->data) == IS_OBJECT) {
+		/* Call __wakeup() method on the object. No user code may run while
+		 * the session upload progress handler decodes the session. */
+		if (Z_TYPE_P(ent1->data) == IS_OBJECT && !BG(serialize_incomplete_classes_only)) {
 			zval *fname, *retval = NULL;
 
 			MAKE_STD_ZVAL(fname);
@@ -993,7 +994,8 @@ static void php_wddx_pop_element(void *user_data, const XML_Char *name)
 						zend_bool incomplete_class = 0;
 
 						zend_str_tolower(Z_STRVAL_P(ent1->data), Z_STRLEN_P(ent1->data));
-						if (zend_hash_find(EG(class_table), Z_STRVAL_P(ent1->data),
+						if (BG(serialize_incomplete_classes_only)
+								|| zend_hash_find(EG(class_table), Z_STRVAL_P(ent1->data),
 										   Z_STRLEN_P(ent1->data)+1, (void **) &pce)==FAILURE) {
 							incomplete_class = 1;
 							pce = &PHP_IC_ENTRY;

@@ -243,6 +243,9 @@ void shutdown_compiler(TSRMLS_D) /* {{{ */
 	zend_hash_destroy(&CG(filenames_table));
 	zend_llist_destroy(&CG(open_files));
 	zend_stack_destroy(&CG(context_stack));
+	/* May be accessed by zend_error() before the next init_compiler() */
+	CG(compiled_filename) = NULL;
+	CG(in_compilation) = 0;
 }
 /* }}} */
 

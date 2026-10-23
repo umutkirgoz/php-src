@@ -140,6 +140,11 @@ inline static void * __zend_realloc(void *p, size_t len)
 #define safe_estrndup(ptr, len) ((ptr)?(estrndup((ptr), (len))):STR_EMPTY_ALLOC())
 
 ZEND_API int zend_set_memory_limit(size_t memory_limit);
+#if defined(__GNUC__) && __GNUC__ >= 3
+ZEND_API void zend_mm_overflow_error(const char *format, ...) __attribute__ ((noreturn)) ZEND_ATTRIBUTE_FORMAT(printf, 1, 2);
+#else
+ZEND_API void zend_mm_overflow_error(const char *format, ...);
+#endif
 
 ZEND_API void start_memory_manager(TSRMLS_D);
 ZEND_API void shutdown_memory_manager(int silent, int full_shutdown TSRMLS_DC);

@@ -348,6 +348,17 @@ static inline int process_nested_data(UNSERIALIZE_PARAMETER, HashTable *ht, long
 		} else {
 			/* object properties should include no integers */
 			convert_to_string(key);
+			/* The members that incomplete_classes_only mode writes itself
+			 * cannot be told apart from data carrying them: reject it. */
+			if (UNEXPECTED(BG(serialize_incomplete_classes_only))
+			 && ((Z_STRLEN_P(key) == sizeof(MAGIC_MEMBER) - 1
+			   && !memcmp(Z_STRVAL_P(key), MAGIC_MEMBER, sizeof(MAGIC_MEMBER) - 1))
+			  || (Z_STRLEN_P(key) == sizeof(MAGIC_MEMBER_SERIALIZED) - 1
+			   && !memcmp(Z_STRVAL_P(key), MAGIC_MEMBER_SERIALIZED, sizeof(MAGIC_MEMBER_SERIALIZED) - 1)))) {
+				var_push_dtor_no_addref(var_hash, &key);
+				var_push_dtor_no_addref(var_hash, &data);
+				return 0;
+			}
 			if (zend_hash_find(ht, Z_STRVAL_P(key), Z_STRLEN_P(key) + 1, (void **)&old_data)==SUCCESS) {
 				var_push_dtor(var_hash, old_data);
 			}
@@ -390,7 +401,16 @@ static inline int object_custom(UNSERIALIZE_PARAMETER, zend_class_entry *ce)
 		return 0;
 	}
 
-	if (ce->unserialize == NULL) {
+	if (ce == PHP_IC_ENTRY && BG(serialize_incomplete_classes_only)) {
+		/* The class was not resolved: keep the payload verbatim, so that the
+		 * object serializes back to the same bytes. */
+		zval *payload;
+
+		ALLOC_INIT_ZVAL(payload);
+		ZVAL_STRINGL(payload, *p, datalen, 1);
+		object_init_ex(*rval, ce);
+		zend_hash_update(Z_OBJPROP_PP(rval), MAGIC_MEMBER_SERIALIZED, sizeof(MAGIC_MEMBER_SERIALIZED), &payload, sizeof(payload), NULL);
+	} else if (ce->unserialize == NULL) {
 		zend_error(E_WARNING, "Class %s has no unserializer", ce->name);
 		object_init_ex(*rval, ce);
 	} else if (ce->unserialize(rval, ce, (const unsigned char*)*p, datalen, (zend_unserialize_data *)var_hash TSRMLS_CC) != SUCCESS) {
@@ -681,6 +701,14 @@ yy20:
 	class_name = estrndup(class_name, len);
 
 	do {
+		if (BG(serialize_incomplete_classes_only)) {
+			/* Do not look the class up at all, so that no user code can run
+			 * (no autoloading, no unserialize_callback_func, no __wakeup()). */
+			incomplete_class = 1;
+			ce = PHP_IC_ENTRY;
+			break;
+		}
+
 		/* Try to find class directly */
 		BG(serialize_lock)++;
 		if (zend_lookup_class(class_name, len2, &pce TSRMLS_CC) == SUCCESS) {
