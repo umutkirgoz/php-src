@@ -615,6 +615,43 @@ static inline zend_bool php_var_serialize_class_name(smart_str *buf, zval *struc
 }
 /* }}} */
 
+/* Write back the C: payload kept by php_var_unserialize() in
+ * incomplete_classes_only mode (see BG(serialize_incomplete_classes_only)) */
+static zend_bool php_var_serialize_incomplete_raw(smart_str *buf, zval *struc TSRMLS_DC) /* {{{ */
+{
+	HashTable *props = Z_OBJPROP_P(struc);
+	zval **member;
+	char *class_name;
+	zend_uint name_len;
+
+	if (!props) {
+		return 0;
+	}
+
+	if (zend_hash_find(props, MAGIC_MEMBER_SERIALIZED, sizeof(MAGIC_MEMBER_SERIALIZED), (void **) &member) == FAILURE
+			|| Z_TYPE_PP(member) != IS_STRING) {
+		/* Other incomplete classes are handled using the normal path */
+		return 0;
+	}
+
+	class_name = php_lookup_class_name(struc, &name_len);
+	if (!class_name) {
+		return 0;
+	}
+	smart_str_appendl(buf, "C:", 2);
+	smart_str_append_unsigned(buf, name_len);
+	smart_str_appendl(buf, ":\"", 2);
+	smart_str_appendl(buf, class_name, name_len);
+	smart_str_appendl(buf, "\":", 2);
+	smart_str_append_unsigned(buf, Z_STRLEN_PP(member));
+	smart_str_appendl(buf, ":{", 2);
+	smart_str_appendl(buf, Z_STRVAL_PP(member), Z_STRLEN_PP(member));
+	smart_str_appendc(buf, '}');
+	efree(class_name);
+	return 1;
+}
+/* }}} */
+
 static void php_var_serialize_class(smart_str *buf, zval *struc, zval *retval_ptr, HashTable *var_hash TSRMLS_DC) /* {{{ */
 {
 	int count;
@@ -790,6 +827,11 @@ static void php_var_serialize_intern(smart_str *buf, zval *struc, HashTable *var
 					if (serialized_data) {
 						efree(serialized_data);
 					}
+					return;
+				}
+
+				if (ce && ce == PHP_IC_ENTRY && BG(serialize_incomplete_classes_only)
+						&& php_var_serialize_incomplete_raw(buf, struc TSRMLS_CC)) {
 					return;
 				}
 

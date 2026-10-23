@@ -94,6 +94,27 @@ static void zend_mm_panic(const char *message)
 	exit(1);
 }
 
+/* Report an allocation size overflow and terminate the process, without
+ * longjmp()ing out of the allocator, see zend_mm_safe_error() */
+ZEND_API void zend_mm_overflow_error(const char *format, ...)
+{
+	va_list args;
+	char buf[1024];
+	TSRMLS_FETCH();
+
+	va_start(args, format);
+	vsnprintf(buf, sizeof(buf), format, args);
+	va_end(args);
+
+	zend_try {
+		zend_error_noreturn(E_ERROR, "%s", buf);
+	} zend_catch {
+	} zend_end_try();
+	fflush(stdout);
+	fflush(stderr);
+	_exit(255);
+}
+
 /*******************/
 /* Storage Manager */
 /*******************/
@@ -1801,7 +1822,13 @@ static void zend_mm_safe_error(zend_mm_heap *heap,
 	} else {
 		heap->overflow = 2;
 	}
-	zend_bailout();
+	/* Do not longjmp() out of the allocator: the interrupted code may have left
+	 * request state half-initialized, and the shutdown sequence would then
+	 * operate on it (GHSA-w8hw-w9fx-j79w, CVE-2026-109618). The error has been
+	 * reported above; terminate the process instead. */
+	fflush(stdout);
+	fflush(stderr);
+	_exit(255);
 }
 
 static zend_mm_free_block *zend_mm_search_large_block(zend_mm_heap *heap, size_t true_size)
@@ -2472,7 +2499,7 @@ static inline size_t safe_address(size_t nmemb, size_t size, size_t offset)
 	       "rm"(offset));
 
 	if (UNEXPECTED(overflow)) {
-		zend_error_noreturn(E_ERROR, "Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
+		zend_mm_overflow_error("Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
 		return 0;
 	}
 	return res;
@@ -2501,7 +2528,7 @@ static inline size_t safe_address(size_t nmemb, size_t size, size_t offset)
 
 #undef LP_SUFF
         if (UNEXPECTED(overflow)) {
-                zend_error_noreturn(E_ERROR, "Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
+                zend_mm_overflow_error("Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
                 return 0;
         }
         return res;
@@ -2522,7 +2549,7 @@ static inline size_t safe_address(size_t nmemb, size_t size, size_t offset)
                "1"(0));
 
         if (UNEXPECTED(overflow)) {
-                zend_error_noreturn(E_ERROR, "Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
+                zend_mm_overflow_error("Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
                 return 0;
         }
         return res;
@@ -2542,7 +2569,7 @@ static inline size_t safe_address(size_t nmemb, size_t size, size_t offset)
                "r"(offset));
 
         if (UNEXPECTED(overflow)) {
-                zend_error_noreturn(E_ERROR, "Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
+                zend_mm_overflow_error("Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
                 return 0;
         }
         return res;
@@ -2555,7 +2582,7 @@ static inline size_t safe_address(size_t nmemb, size_t size, size_t offset)
 	zend_ulong64 res = (zend_ulong64)nmemb * (zend_ulong64)size + (zend_ulong64)offset;
 
 	if (UNEXPECTED(res > (zend_ulong64)0xFFFFFFFFL)) {
-		zend_error_noreturn(E_ERROR, "Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
+		zend_mm_overflow_error("Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
 		return 0;
 	}
 	return (size_t) res;
@@ -2570,7 +2597,7 @@ static inline size_t safe_address(size_t nmemb, size_t size, size_t offset)
 	double _delta = (double)res - _d;
 
 	if (UNEXPECTED((_d + _delta ) != _d)) {
-		zend_error_noreturn(E_ERROR, "Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
+		zend_mm_overflow_error("Possible integer overflow in memory allocation (%zu * %zu + %zu)", nmemb, size, offset);
 		return 0;
 	}
 	return res;

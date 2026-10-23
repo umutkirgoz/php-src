@@ -328,6 +328,30 @@ void shutdown_executor(TSRMLS_D) /* {{{ */
 		}
 	} zend_end_try();
 
+	/* The request heap is about to be freed, but the following may be accessed
+	 * (e.g. by zend_error()) before the next init_executor(). A bailout above may
+	 * also have skipped their cleanup. Reset them unconditionally
+	 * (GHSA-6wmf-4rv5-p3rp, CVE-2026-109619). */
+	EG(user_error_handler) = NULL;
+	EG(user_exception_handler) = NULL;
+	memset(&EG(user_error_handlers_error_reporting), 0, sizeof(EG(user_error_handlers_error_reporting)));
+	memset(&EG(user_error_handlers), 0, sizeof(EG(user_error_handlers)));
+	memset(&EG(user_exception_handlers), 0, sizeof(EG(user_exception_handlers)));
+	EG(objects_store).object_buckets = NULL;
+	EG(objects_store).top = 1;
+	EG(objects_store).size = 0;
+	EG(objects_store).free_list_head = -1;
+	EG(in_autoload) = NULL;
+	EG(error_handling) = EH_NORMAL;
+	EG(exception_class) = NULL;
+	EG(exception) = NULL;
+	EG(prev_exception) = NULL;
+	EG(current_execute_data) = NULL;
+	EG(in_execution) = 0;
+	EG(active_op_array) = NULL;
+	EG(opline_ptr) = NULL;
+	EG(active_symbol_table) = NULL;
+
 	zend_shutdown_fpu(TSRMLS_C);
 
 	EG(active) = 0;

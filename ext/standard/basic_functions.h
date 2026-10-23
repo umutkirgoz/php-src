@@ -230,6 +230,11 @@ typedef struct _php_basic_globals {
 #endif
 
 	int umask;
+
+	/* Set while the session upload progress handler (un)serializes the
+	 * session before RINIT: objects are kept as __PHP_Incomplete_Class and
+	 * no user code may run. See php_session_rfc1867_update(). */
+	zend_bool serialize_incomplete_classes_only;
 } php_basic_globals;
 
 #ifdef ZTS
@@ -257,6 +262,7 @@ typedef struct _php_shutdown_function_entry {
 	int arg_count;
 } php_shutdown_function_entry;
 
+PHPAPI void php_basic_early_rinit(TSRMLS_D);
 PHPAPI extern zend_bool register_user_shutdown_function(char *function_name, size_t function_len, php_shutdown_function_entry *shutdown_function_entry TSRMLS_DC);
 PHPAPI extern zend_bool remove_user_shutdown_function(char *function_name, size_t function_len TSRMLS_DC);
 PHPAPI extern zend_bool append_user_shutdown_function(php_shutdown_function_entry shutdown_function_entry TSRMLS_DC);
