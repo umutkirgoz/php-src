@@ -78,3 +78,13 @@ rpm -q php-common                      # php-common-5.6.40-41.el7.remi
 | Upload progress: session dosyası | aynen | aynen, nesneler çözülmeden geri yazıldı |
 | Test süiti (3988 test) | 18 başarısız | 17 başarısız; yeni hata yok, GHSA-9pqp-7h25-4f32 düzeldi |
 | yükseltme → geri dönüş | | sorunsuz, modül listesi ilk haline döndü |
+
+## Kurulum kaydı (23 Ekim 2026)
+
+192.168.42.201 (`hissenet`): `deploy/` paketi ile kuruldu (`install.sh` başarılı, 17:44:36 graceful
+reload). `deploy/verify-fix.sh` ile doğrulandı: libphp5.so'da yeni kod, tüm httpd süreçleri yeni
+modülde, OOM sonrası shutdown fonksiyonu çalışmıyor, upload progress'te `$_SESSION` sızmıyor.
+Reload sonrası ~2 dk süreç sayısı ve yanıt süreleri yükseldi (22→133 süreç, forum.php 0,22→0,41 sn),
+ardından önceki değerlere döndü; trafikte 5xx görülmedi.
+
+Kurulmadan kalanlar: `php56-php-*` SCL paketleri (5.6.40-41, yalnızca `/usr/bin/php56` CLI).

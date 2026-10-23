@@ -7,3 +7,4 @@
 
 # the top-level php-src .gitignore excludes *.patch; the spec patches are sources here
 !/SOURCES/*.patch
+/deploy/*.tar.gz
